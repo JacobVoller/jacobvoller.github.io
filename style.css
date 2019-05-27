@@ -1,0 +1,61 @@
+
+::selection {
+	background: #fff2a8;
+}
+
+::-moz-selection {
+	background: #fff2a8;
+}
+
+body {
+    background-color: #F0F0F2;
+    font-family: "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+}
+
+h1 {
+    margin-top: 25px;
+    margin-bottom: 0;
+
+    font-size: 38px;		
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 145px;
+
+    font-size: 26px;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+
+    font-size: 20px;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: black;
+    text-decoration: none;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 2px black solid;
+    position: fixed;
+
+    top: 50%;
+    width: 500px;
+    margin-left: -250px;
+
+    left: 50%;
+    height: 286px;
+    margin-top: -143px;
+}
