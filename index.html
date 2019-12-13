@@ -53,7 +53,18 @@
 				text-align: center;
 			}
 			@media (max-width: 768px) {
-				.sm {
+				.col-md-12.sm {
+					-ms-flex: 0 0 100%;
+					flex: 0 0 100%;
+					max-width: 100%;
+				}
+				.col-md-6.sm {
+					-ms-flex: 0 0 50%;
+					flex: 0 0 50%;
+					max-width: 50%;
+				}
+				.col-md-4.sm,
+				.col-md-3.sm {
 					-ms-flex: 0 0 33.3%;
 					flex: 0 0 33.3%;
 					max-width: 33.3%;
@@ -81,38 +92,48 @@
 				<div class="col-md-8 col-sm-12 col-xs-12">
 					<div class="container-fluid">
 						<div class="row bor">
-							<div class="col-md-3 sm">
-								<a href="https://www.linkedin.com/in/jacobvoller/" target="_blank" title="Jacob C. Voller's LinkedIn">
-									<i class="fab fa-linkedin-in icon"></i>
-									<h3>LinkedIn</h3>	
-								</a>
-							</div>
-							<div class="col-md-3 sm">
-								<a href="https://www.facebook.com/jacobcvoller" target="_blank" title="Jacob C. Voller's Facebook">
-									<i class="fab fa-facebook-f icon"></i>
-									<h3>Facebook</h3>
-								</a>
-							</div>
-							<div class="col-md-3 sm">
-								<a href="https://www.crunchbase.com/person/jacob-voller" target="_blank" title="Jacob C. Voller's Crunchbase profile">
-									<i class="fa fa-share-alt icon"></i>
-									<h3>Crunchbase</h3>
-								</a>
-							</div>
-						</div>
-						<div class="row bor">
-							<div class="col-md-3 sm">
+							<div class="col-md-12 sm">
 								<a href="http://www.jacobvoller.com" target="_blank" title="Jacob C. Voller's Personal Website">
 									<i class="fas fa-desktop icon"></i>
 									<h3>Personal Website</h3>
 								</a>
 							</div>
-							<div class="col-md-3 sm">
+						</div>
+						<div class="row bor">
+							<div class="col-md-6 sm">
 								<a href="http://refer.amex.us/JACOBVDztz?XLINK=TWIA" target="_blank" title="Jacob C. Voller's American Express Referral Link">
 									<i class="fab fa-cc-amex icon"></i>
 									<h3>American Express</h3>
 								</a>
 							</div>
+							<div class="col-md-6 sm">
+								<a href="https://act.webull.com/promotion/invitation/share.html?inviteCode=QkzCpveu4wJ2" target="_blank" title="Jacob C. Voller's WeBull Referral Link">
+									<i class="fas fa-chart-line icon"></i>
+									<h3>WeBull</h3>
+								</a>
+							</div>
+						</div>
+						<div class="row bor">
+							<div class="col-md-4 sm">
+								<a href="https://www.crunchbase.com/person/jacob-voller" target="_blank" title="Jacob C. Voller's Crunchbase profile">
+									<i class="fa fa-share-alt icon"></i>
+									<h3>Crunchbase</h3>
+								</a>
+							</div>
+							<div class="col-md-4 sm">
+								<a href="https://www.facebook.com/jacobcvoller" target="_blank" title="Jacob C. Voller's Facebook">
+									<i class="fab fa-facebook-f icon"></i>
+									<h3>Facebook</h3>
+								</a>
+							</div>
+							<div class="col-md-4 sm">
+								<a href="https://www.linkedin.com/in/jacobvoller/" target="_blank" title="Jacob C. Voller's LinkedIn">
+									<i class="fab fa-linkedin-in icon"></i>
+									<h3>LinkedIn</h3>	
+								</a>
+							</div>
+						</div>
+						<div class="row bor">
 							<div class="col-md-3 sm">
 								<a href="https://about.me/jacobvoller/" target="_blank" title="Jacob C. Voller's About.me">
 									<i class="fa fa-share-alt icon"></i>
