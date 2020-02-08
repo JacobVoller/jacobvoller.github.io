@@ -1,0 +1,3 @@
+user-agent: *
+disallow:
+sitemap: http://jacobvoller.com/sitemap.xml
