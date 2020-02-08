@@ -4,7 +4,7 @@ The personal website of Jacob C. Voller, Software Engineer.
 For more information, visit www.jacobvoller.com
 
 ## Hosting
-The project [static files] are hosted at https://github.com/JacobVoller/jacobvoller.com.
+The project [static files] are hosted at https://github.com/JacobVoller/jacobvoller.github.io
 
 ### Generated Images
 There are a series of generated images. The source code to generate them is in a seperate git repo: https://github.com/JacobVoller/jacobvoller.com-image-generator. The actual generated files should be placed in this repository to be copied to the production server on deploy.
@@ -28,9 +28,6 @@ Everytime there is a push to master, DeployHQ hooks into the GitHub repo and cop
 ### Content
 #### Home
 The home page is intended to be the primary web page. Styled like a formal letter to provide a brief descriptiobn of Jacob and provide SEO material.
-
-#### Links
-The links page is not intended to be viewed by people or linked to; it's meant to be crawled and establish SEO links to elevate positive profiles and news articles of Jacob.
 
 ### Google Analytics
 Google anaystics is used to track site traffic and performance.
