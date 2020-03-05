@@ -33,6 +33,7 @@ body {
     .panel {
         width: calc(100% - 60px);
         height: auto;
+        box-shadow: none;
     }
 }
 
@@ -168,7 +169,9 @@ p {
     }
 }
 
-::selection,
+::selection {
+    background: @highlight-color;
+}
 ::-moz-selection {
     background: @highlight-color;
 }
