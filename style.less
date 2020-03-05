@@ -1,0 +1,216 @@
+@primary-color: #142755;
+@highlight-color: #fff2a8;
+@text-font: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;;
+@elegant-font: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+@small-screen-size: 600px;
+
+@large-screen-margin: 50px;
+@small-screen-margin: 10px;
+
+body {
+    background-color: #F3F3FE;
+    margin: 0;
+    padding: 15px;
+    font-family: @text-font;
+}
+@media (max-width: @small-screen-size) {
+    body {
+        padding: 5px;
+    }
+}
+
+.panel {
+    width: 708px;
+    height: 934px;
+    background-color: white;
+    border: 30px solid @primary-color;
+    box-shadow: 10px 30px 20px rgba(0, 24, 79, 0.3);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+@media (max-width: @small-screen-size) {
+    .panel {
+        width: calc(100% - 60px);
+        height: auto;
+    }
+}
+
+.header {
+    background-color: @primary-color;
+    color: white;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+@media (max-width: @small-screen-size) {
+    .header {
+        width: 320px;
+        border: 0;
+    }
+}
+
+.point {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 200px 0 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: @primary-color transparent transparent transparent;
+    margin-bottom: 65px;
+}
+@media (max-width: @small-screen-size) {
+    .point {
+        border-width: 50px 160px 0 160px;
+    }
+}
+
+h1 {
+    text-transform: capitalize;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    vertical-align: center;
+    font-family: @elegant-font;
+    border: 0;
+}
+@media (max-width: @small-screen-size) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 28px;
+    text-align: center;
+    margin: 0;
+    margin-top: -12px;
+    padding: 0;
+    font-family: @elegant-font;
+}
+@media (max-width: @small-screen-size) {
+    h2 {
+        font-size: 22px;
+        margin-top: -4px;
+    }
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: normal;
+    font-size: 20px;
+    padding-left: @large-screen-margin;
+    padding-right: @large-screen-margin;
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        color: black;
+        text-decoration: underline;
+    }
+
+    a:hover,
+    a:active {
+        text-decoration: underline;
+        color: white;
+        background-color: @primary-color;
+    }
+}
+@media (max-width: @small-screen-size) {
+    p {
+        padding-left: @small-screen-margin;
+        padding-right: @small-screen-margin;
+    }
+}
+
+.signoff {
+    margin-left: @large-screen-margin;
+    margin-top: 45px;
+    font-weight: normal;
+    font-size: 20px;
+
+    .salutation {
+        margin-bottom: 15px;
+    }
+
+    .signature {
+        background-image: url("img/signature.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 211px 46px;
+        display: block;
+        width: 211px;
+        height: 46px;
+    }
+
+    .name {
+        width: 300px;
+        margin-top: -15px;
+        border-top: 5px solid @primary-color;
+        padding-left: 0;
+    }
+}
+@media (max-width: @small-screen-size) {
+    .signoff {
+        margin-left: @small-screen-margin;
+    }
+}
+
+::selection,
+::-moz-selection {
+    background: @highlight-color;
+}
+
+.footer {
+    bottom: 0;
+    color: white;
+    background-color: @primary-color;
+    left: 0;
+    font-size: 20px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    position: absolute;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-family: @elegant-font;
+
+    a,
+    a:link,
+    a:visited,
+    a:hover {
+        font-weight: normal;
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover,
+    a:active {
+        text-decoration: underline;
+    }
+
+    .divider {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+}
+@media (max-width: @small-screen-size) {
+    .footer {
+        position: relative;
+        margin-top: 50px;
+    }
+}
+

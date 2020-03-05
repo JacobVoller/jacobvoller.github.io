@@ -1,0 +1,188 @@
+body {
+  background-color: #F3F3FE;
+  margin: 0;
+  padding: 15px;
+  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+}
+.panel {
+  width: 708px;
+  height: 934px;
+  background-color: white;
+  border: 30px solid #142755;
+  box-shadow: 10px 30px 20px rgba(0, 24, 79, 0.3);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+@media (max-width: 600px) {
+  .panel {
+    width: calc(100% - 60px);
+    height: auto;
+  }
+}
+.header {
+  background-color: #142755;
+  color: white;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+@media (max-width: 600px) {
+  .header {
+    width: 320px;
+    border: 0;
+  }
+}
+.point {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 200px 0 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: #142755 transparent transparent transparent;
+  margin-bottom: 65px;
+}
+@media (max-width: 600px) {
+  .point {
+    border-width: 50px 160px 0 160px;
+  }
+}
+h1 {
+  text-transform: capitalize;
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  vertical-align: center;
+  font-family: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+  border: 0;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 28px;
+  text-align: center;
+  margin: 0;
+  margin-top: -12px;
+  padding: 0;
+  font-family: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+}
+@media (max-width: 600px) {
+  h2 {
+    font-size: 22px;
+    margin-top: -4px;
+  }
+}
+p {
+  margin-top: 15px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: normal;
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+p a,
+p a:link,
+p a:visited,
+p a:hover,
+p a:active {
+  color: black;
+  text-decoration: underline;
+}
+p a:hover,
+p a:active {
+  text-decoration: underline;
+  color: white;
+  background-color: #142755;
+}
+@media (max-width: 600px) {
+  p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.signoff {
+  margin-left: 50px;
+  margin-top: 45px;
+  font-weight: normal;
+  font-size: 20px;
+}
+.signoff .salutation {
+  margin-bottom: 15px;
+}
+.signoff .signature {
+  background-image: url("img/signature.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 211px 46px;
+  display: block;
+  width: 211px;
+  height: 46px;
+}
+.signoff .name {
+  width: 300px;
+  margin-top: -15px;
+  border-top: 5px solid #142755;
+  padding-left: 0;
+}
+@media (max-width: 600px) {
+  .signoff {
+    margin-left: 10px;
+  }
+}
+::selection,
+::-moz-selection {
+  background: #fff2a8;
+}
+.footer {
+  bottom: 0;
+  color: white;
+  background-color: #142755;
+  left: 0;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 0;
+  position: absolute;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+}
+.footer a,
+.footer a:link,
+.footer a:visited,
+.footer a:hover {
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+}
+.footer a:hover,
+.footer a:active {
+  text-decoration: underline;
+}
+.footer .divider {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media (max-width: 600px) {
+  .footer {
+    position: relative;
+    margin-top: 50px;
+  }
+}
