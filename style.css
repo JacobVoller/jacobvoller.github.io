@@ -1,6 +1,7 @@
 body {
   background-color: #F3F3FE;
   margin: 0;
+  margin-bottom: 15px;
   padding: 15px;
   font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
 }
@@ -8,11 +9,12 @@ body {
   body {
     padding: 0;
     background-color: #142755;
+    margin-bottom: 0;
   }
 }
 .panel {
-  width: 708px;
-  height: 934px;
+  width: 600px;
+  height: 777px;
   background-color: white;
   border: 30px solid #142755;
   box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
@@ -22,7 +24,7 @@ body {
 }
 @media (max-width: 600px) {
   .panel {
-    width: calc(100% - 60px);
+    width: calc(100% - 30px - 30px);
     height: auto;
     box-shadow: none;
   }
@@ -51,7 +53,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   border-color: #142755 transparent transparent transparent;
-  margin-bottom: 65px;
+  margin-bottom: 35px;
 }
 @media (max-width: 600px) {
   .point {
@@ -72,7 +74,7 @@ h1 {
 }
 @media (max-width: 600px) {
   h1 {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 h2 {
@@ -97,7 +99,7 @@ p {
   margin-left: 0;
   margin-right: 0;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -123,9 +125,9 @@ p a:active {
 }
 .signoff {
   margin-left: 50px;
-  margin-top: 45px;
+  margin-top: 15px;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 18px;
 }
 .signoff .salutation {
   margin-bottom: 15px;

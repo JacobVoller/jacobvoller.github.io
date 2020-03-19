@@ -2,14 +2,20 @@
 @highlight-color: #fff2a8;
 @text-font: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;;
 @elegant-font: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
-@small-screen-size: 600px;
+
 
 @large-screen-margin: 50px;
 @small-screen-margin: 10px;
 
+@border-width: 30px;
+@letter-width: 600px;
+@small-screen-size: 600px;
+@letter-height: 777px;
+
 body {
     background-color: #F3F3FE;
     margin: 0;
+    margin-bottom: 15px;
     padding: 15px;
     font-family: @text-font;
 }
@@ -17,14 +23,16 @@ body {
     body {
         padding: 0;
         background-color: @primary-color;
+        margin-bottom: 0;
     }
 }
 
 .panel {
-    width: 708px;
-    height: 934px;
+    width: @letter-width;
+     height: @letter-height;
+    //min-height: @letter-height;
     background-color: white;
-    border: 30px solid @primary-color;
+    border: @border-width solid @primary-color;
     box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
     margin-left: auto;
     margin-right: auto;
@@ -32,7 +40,7 @@ body {
 }
 @media (max-width: @small-screen-size) {
     .panel {
-        width: calc(100% - 60px);
+        width: calc(100% - @border-width - @border-width);
         height: auto;
         box-shadow: none;
     }
@@ -63,7 +71,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-color: @primary-color transparent transparent transparent;
-    margin-bottom: 65px;
+    margin-bottom: 35px;
 }
 @media (max-width: @small-screen-size) {
     .point {
@@ -85,7 +93,7 @@ h1 {
 }
 @media (max-width: @small-screen-size) {
     h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
 }
 
@@ -112,7 +120,7 @@ p {
     margin-left: 0;
     margin-right: 0;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     padding-left: @large-screen-margin;
     padding-right: @large-screen-margin;
 
@@ -141,9 +149,9 @@ p {
 
 .signoff {
     margin-left: @large-screen-margin;
-    margin-top: 45px;
+    margin-top: 15px;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
 
     .salutation {
         margin-bottom: 15px;
