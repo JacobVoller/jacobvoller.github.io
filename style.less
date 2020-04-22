@@ -32,6 +32,7 @@ body {
     height: @letter-height;
     background-color: white;
     border: @border-width solid @primary-color;
+    border-bottom-width: (@border-width - 5px);
     box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
     margin-left: auto;
     margin-right: auto;
@@ -192,7 +193,7 @@ p {
     background-color: @primary-color;
     left: 0;
     font-size: 16px;
-    padding-top: @border-width;
+    padding-top: (@border-width - 5px);
     padding-bottom: 0;
     position: absolute;
     width: 100%;
