@@ -1,38 +1,54 @@
 body {
-  background-color: #F3F3FE;
+  background-color: #A9A9A9;
   margin: 0;
   margin-bottom: 15px;
-  padding: 15px;
+  padding: 30px;
   font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
 }
 @media (max-width: 600px) {
   body {
     padding: 0;
-    background-color: #142755;
     margin-bottom: 0;
+    background-color: white;
   }
 }
-.panel {
-  width: 600px;
+.paper {
+  width: 660px;
   height: 777px;
   background-color: white;
-  border: 30px solid #142755;
-  border-bottom-width: 25px;
+  border: 0;
   box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0;
   position: relative;
+  border-radius: 3px;
+  padding-top: 20px;
 }
 @media (max-width: 600px) {
-  .panel {
-    width: calc(100% - 30px - 30px);
+  .paper {
+    width: 100%;
     height: auto;
     box-shadow: none;
   }
 }
+.outline {
+  margin: 20px;
+  margin-top: 0;
+  width: calc(660px - 44px);
+  height: calc(777px - 44px - 5px);
+  border: 2px solid black;
+  border-radius: 3px;
+  padding-top: 25px;
+}
+@media (max-width: 600px) {
+  .outline {
+    width: calc(100% - 44px);
+    height: auto;
+  }
+}
 .header {
-  background-color: #142755;
-  color: white;
+  color: black;
   width: 300px;
   margin-left: auto;
   margin-right: auto;
@@ -46,25 +62,9 @@ body {
     margin-top: -1px;
   }
 }
-.point {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 50px 150px 0 150px;
-  margin-left: auto;
-  margin-right: auto;
-  border-color: #142755 transparent transparent transparent;
-  margin-bottom: 35px;
-}
-@media (max-width: 600px) {
-  .point {
-    border-width: 50px 160px 0 160px;
-    margin-top: -1px;
-  }
-}
 h1 {
   text-transform: capitalize;
-  font-size: 32px;
+  font-size: 35px;
   font-weight: 700;
   text-align: center;
   margin: 0;
@@ -75,7 +75,7 @@ h1 {
 }
 @media (max-width: 600px) {
   h1 {
-    font-size: 32px;
+    font-size: 35px;
   }
 }
 h2 {
@@ -95,7 +95,7 @@ h2 {
   }
 }
 p {
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
@@ -116,7 +116,7 @@ p a:hover,
 p a:active {
   text-decoration: underline;
   color: white;
-  background-color: #142755;
+  background-color: black;
 }
 @media (max-width: 600px) {
   p {
@@ -145,7 +145,7 @@ p a:active {
 .signoff .name {
   width: 300px;
   margin-top: -15px;
-  border-top: 5px solid #142755;
+  border-top: 0;
   padding-left: 0;
 }
 @media (max-width: 600px) {
@@ -161,12 +161,11 @@ p a:active {
 }
 .footer {
   bottom: 0;
-  color: white;
-  background-color: #142755;
+  color: black;
   left: 0;
   font-size: 16px;
-  padding-top: 25px;
-  padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 28px;
   position: absolute;
   width: 100%;
   vertical-align: middle;
@@ -179,7 +178,7 @@ p a:active {
 .footer a:hover {
   font-weight: normal;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 .footer a:hover,
 .footer a:active {
@@ -196,5 +195,6 @@ p a:active {
     margin-bottom: -1px;
     margin-left: -1px;
     width: calc(100% + 2px);
+    padding-bottom: 8px;
   }
 }
