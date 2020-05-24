@@ -14,7 +14,7 @@ body {
 }
 .paper {
   width: 660px;
-  height: 777px;
+  height: 854px;
   background-color: white;
   border: 0;
   box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
@@ -28,7 +28,7 @@ body {
 @media (max-width: 600px) {
   .paper {
     width: 100%;
-    height: auto;
+    height: 100%;
     box-shadow: none;
   }
 }
@@ -36,7 +36,7 @@ body {
   margin: 20px;
   margin-top: 0;
   width: calc(660px - 44px);
-  height: calc(777px - 44px - 5px);
+  height: calc(854px - 44px - 5px);
   border: 2px solid black;
   border-radius: 3px;
   padding-top: 25px;
@@ -44,7 +44,7 @@ body {
 @media (max-width: 600px) {
   .outline {
     width: calc(100% - 44px);
-    height: auto;
+    height: 100%;
   }
 }
 .header {
