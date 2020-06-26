@@ -1,20 +1,13 @@
-@highlight-color: #fff2a8;
 @text-font: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;;
 @elegant-font: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
 
-
 @large-screen-margin: 25px;
 @small-screen-margin: 10px;
-
-@letter-width: 660px;
 @small-screen-size: 600px;
-@letter-height: 854px;
 
 body {
-    background-color: #A9A9A9;
+    background-color: #BDC3C7;
     margin: 0;
-  
-    margin-bottom: 15px;
     padding: 30px;
     font-family: @text-font;
 }
@@ -22,162 +15,195 @@ body {
     body {
         padding: 0;
         margin-bottom: 0;
-        background-color: white;
     }
 }
 
-.paper {
-    width: @letter-width;
-    height: @letter-height;
-    background-color: white;
+@card-height: 285px;
+@card-width: 500px;
+@card-radius: 3px;
+@primary-color: #1b0369;
+//@primary-color: white;
+@opposite-color: white;
+
+.card {
+    height: @card-height;
+    width: @card-width;
+    
+    border-radius: @card-radius;
     border: 0;
+
+    background-color: @primary-color;
+
+    color: @opposite-color;
     box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    position: relative;
-    border-radius: 3px;
-    padding-top: 20px;
+
+    position: absolute;
+    top: calc(50% - (@card-height / 2));
+    left: calc(50% - (@card-width / 2));
 }
+
 @media (max-width: @small-screen-size) {
-    .paper {
-        width: 100%;
-        height: 100%;
+    .card {
         box-shadow: none;
     }
 }
 
-.outline {
-    margin: 20px;
-    margin-top: 0;
-    width: calc(@letter-width - 44px);
-    height: calc(@letter-height - 44px - 5px);
-    border: 2px solid black;
-    border-radius: 3px;
-    padding-top: 25px;
-}
-@media (max-width: @small-screen-size) {
-    .outline {
-        width: calc(100% - 44px);
-        height: 100%;
-    }
+@card-border-margin: 6px;
+@card-border-padding: 2px;
+@card-border-color: @opposite-color;
+
+@border-a-width: 2px;
+
+.border-a {
+    height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width));
+    width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width));
+
+    border-radius: @card-radius;
+    border: @border-a-width solid @card-border-color;
+
+    position: absolute;
+    margin: @card-border-margin;
+    padding: @card-border-padding;
 }
 
-.header {
-    color: black;
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+@inner-border-outside-width: 1px;
+@inner-border-inside-width: 2px;
+
+.border-b {
+    height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width));
+    width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width));
+    
+    border-radius: @card-radius;
+    border: @inner-border-outside-width solid @card-border-color;
+
+    position: absolute;
+    margin: 0;
+    padding: 0;
 }
-@media (max-width: @small-screen-size) {
-    .header {
-        width: 320px;
-        border: 0;
-        margin-top: -1px;
-    }
+
+.border-c {
+    height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width) - (2 * @inner-border-inside-width));
+    width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width) - (2 * @inner-border-inside-width));
+
+    border-radius: 0;
+    border: @inner-border-inside-width dashed @card-border-color;
+
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.border-d {
+    height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width));
+    width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width));
+
+    border-radius: 0;
+    border: @inner-border-outside-width solid @card-border-color;
+}
+
+@content-margin: 6px;
+
+.content {
+    height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width) - (2 * @content-margin));
+    width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width) - (2 * @content-margin));
+
+    margin: @content-margin;
+    padding: 0;
+}
+
+@accent-color: #0d0231;
+
+.bg0 {
+    background-color: @primary-color;
+}
+
+.bg1 {
+    background:
+        radial-gradient(@accent-color 3px, transparent 4px),
+        radial-gradient(@accent-color 3px, transparent 4px),
+        linear-gradient(@primary-color 4px, transparent 0),
+        linear-gradient(45deg, transparent 74px, transparent 75px, @accent-color 75px, @accent-color 76px, transparent 77px, transparent 109px),
+        linear-gradient(-45deg, transparent 75px, transparent 76px, @accent-color 76px, @accent-color 77px, transparent 78px, transparent 109px),
+        @primary-color;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 }
 
 h1 {
-    text-transform: capitalize;
-    font-size: 35px;
+    font-size: 44px;
     font-weight: 700;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    vertical-align: center;
     font-family: @elegant-font;
-    border: 0;
-}
-@media (max-width: @small-screen-size) {
-    h1 {
-        font-size: 35px;
-    }
+
+    text-transform: capitalize;
+    text-align: center;
+
+    color: @primary-color;
+    text-shadow: -1px -1px 0 @opposite-color, 1px -1px 0 @opposite-color, -1px 1px 0 @opposite-color, 1px 1px 0 @opposite-color;
+
+    margin: 0;
 }
 
 h2 {
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 22px;
-    text-align: center;
-    margin: 0;
-    margin-top: -12px;
-    padding: 0;
+    font-size: 24px;
+    font-weight: 700;
     font-family: @elegant-font;
+    color: @opposite-color;
+    
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-top: -14px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
 }
-@media (max-width: @small-screen-size) {
-    h2 {
-        font-size: 22px;
-        margin-top: -4px;
-    }
+
+h4 {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: @text-font;
+    color: @opposite-color;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 p {
-    margin-top: 25px;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: normal;
-    font-size: 18px;
-    padding-left: @large-screen-margin;
-    padding-right: @large-screen-margin;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: @text-font;
+    color: @opposite-color;
 
-    a,
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
-        color: black;
-        text-decoration: underline;
-    }
-
-    a:hover,
-    a:active {
-        text-decoration: underline;
-        color: white;
-        background-color: black;
-    }
-}
-@media (max-width: @small-screen-size) {
-    p {
-        padding-left: @small-screen-margin;
-        padding-right: @small-screen-margin;
-    }
+    text-align: center;
+    
+    margin: 0;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 25px;
 }
 
-.signoff {
-    margin-left: @large-screen-margin;
-    margin-top: 15px;
-    font-weight: normal;
-    font-size: 18px;
-
-    .salutation {
-        margin-bottom: 15px;
-    }
-
-    .signature {
-        background-image: url("img/signature.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-size: 211px 46px;
-        display: block;
-        width: 211px;
-        height: 46px;
-    }
-
-    .name {
-        width: 300px;
-        margin-top: -15px;
-        border-top: 0;
-        padding-left: 0;
-    }
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: @opposite-color;
+    text-decoration: none;
 }
-@media (max-width: @small-screen-size) {
-    .signoff {
-        margin-left: @small-screen-margin;
-    }
+
+a:hover,
+a:active {
+    color: @opposite-color;
+    text-decoration: underline;
 }
+
+@highlight-color: #fff2a8;
 
 ::selection {
     background: @highlight-color;
@@ -186,47 +212,26 @@ p {
     background: @highlight-color;
 }
 
-.footer {
-    bottom: 0;
-    color: black;
-    left: 0;
-    font-size: 16px;
+@pinned-spacing: 10px;
+
+.pin-bottom-left {
     padding-top: 0;
-    padding-bottom: 28px;
+    padding-left: @pinned-spacing;
+    padding-right: 0;
+    padding-bottom: @pinned-spacing;
+
     position: absolute;
-    width: 100%;
-    vertical-align: middle;
-    text-align: center;
-    font-family: @elegant-font;
-
-    a,
-    a:link,
-    a:visited,
-    a:hover {
-        font-weight: normal;
-        text-decoration: none;
-        color: black;
-    }
-
-    a:hover,
-    a:active {
-        text-decoration: underline;
-    }
-
-    .divider {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-}
-@media (max-width: @small-screen-size) {
-    .footer {
-        position: relative;
-        margin-top: 50px;
-        margin-bottom: -1px;
-        margin-left: -1px;
-        width: calc(100% + 2px);
-        padding-bottom: 8px;
-    }
+    bottom: 0px;
+    left: 0px;
 }
 
+.pin-bottom-right {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: @pinned-spacing;
+    padding-bottom: @pinned-spacing;
+
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+}

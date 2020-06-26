@@ -1,7 +1,6 @@
 body {
-  background-color: #A9A9A9;
+  background-color: #BDC3C7;
   margin: 0;
-  margin-bottom: 15px;
   padding: 30px;
   font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
 }
@@ -9,149 +8,130 @@ body {
   body {
     padding: 0;
     margin-bottom: 0;
-    background-color: white;
   }
 }
-.paper {
-  width: 660px;
-  height: 854px;
-  background-color: white;
-  border: 0;
-  box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  position: relative;
+.card {
+  height: 285px;
+  width: 500px;
   border-radius: 3px;
-  padding-top: 20px;
+  border: 0;
+  background-color: #1b0369;
+  color: white;
+  box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
+  position: absolute;
+  top: calc(50% - (285px / 2));
+  left: calc(50% - (500px / 2));
 }
 @media (max-width: 600px) {
-  .paper {
-    width: 100%;
-    height: 100%;
+  .card {
     box-shadow: none;
   }
 }
-.outline {
-  margin: 20px;
-  margin-top: 0;
-  width: calc(660px - 44px);
-  height: calc(854px - 44px - 5px);
-  border: 2px solid black;
+.border-a {
+  height: calc(285px - (2 * 6px) - (2 * 2px) - (2 * 2px));
+  width: calc(500px - (2 * 6px) - (2 * 2px) - (2 * 2px));
   border-radius: 3px;
-  padding-top: 25px;
+  border: 2px solid white;
+  position: absolute;
+  margin: 6px;
+  padding: 2px;
 }
-@media (max-width: 600px) {
-  .outline {
-    width: calc(100% - 44px);
-    height: 100%;
-  }
+.border-b {
+  height: calc(285px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
+  width: calc(500px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
+  border-radius: 3px;
+  border: 1px solid white;
+  position: absolute;
+  margin: 0;
+  padding: 0;
 }
-.header {
-  color: black;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.border-c {
+  height: calc(285px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
+  width: calc(500px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
+  border-radius: 0;
+  border: 2px dashed white;
+  position: absolute;
+  margin: 0;
+  padding: 0;
 }
-@media (max-width: 600px) {
-  .header {
-    width: 320px;
-    border: 0;
-    margin-top: -1px;
-  }
+.border-d {
+  height: calc(285px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
+  width: calc(500px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
+  border-radius: 0;
+  border: 1px solid white;
+}
+.content {
+  height: calc(285px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px));
+  width: calc(500px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px));
+  margin: 6px;
+  padding: 0;
+}
+.bg0 {
+  background-color: #1b0369;
+}
+.bg1 {
+  background: radial-gradient(#0d0231 3px, transparent 4px), radial-gradient(#0d0231 3px, transparent 4px), linear-gradient(#1b0369 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #0d0231 75px, #0d0231 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #0d0231 76px, #0d0231 77px, transparent 78px, transparent 109px), #1b0369;
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 }
 h1 {
-  text-transform: capitalize;
-  font-size: 35px;
+  font-size: 44px;
   font-weight: 700;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  vertical-align: center;
   font-family: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
-  border: 0;
-}
-@media (max-width: 600px) {
-  h1 {
-    font-size: 35px;
-  }
+  text-transform: capitalize;
+  text-align: center;
+  color: #1b0369;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  margin: 0;
 }
 h2 {
-  text-transform: uppercase;
-  font-weight: normal;
-  font-size: 22px;
-  text-align: center;
-  margin: 0;
-  margin-top: -12px;
-  padding: 0;
+  font-size: 24px;
+  font-weight: 700;
   font-family: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
-}
-@media (max-width: 600px) {
-  h2 {
-    font-size: 22px;
-    margin-top: -4px;
-  }
-}
-p {
-  margin-top: 25px;
-  margin-bottom: 0;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: -14px;
   margin-left: 0;
   margin-right: 0;
-  font-weight: normal;
-  font-size: 18px;
-  padding-left: 25px;
-  padding-right: 25px;
+  margin-bottom: 0;
 }
-p a,
-p a:link,
-p a:visited,
-p a:hover,
-p a:active {
-  color: black;
-  text-decoration: underline;
-}
-p a:hover,
-p a:active {
-  text-decoration: underline;
+h4 {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
   color: white;
-  background-color: black;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
 }
-@media (max-width: 600px) {
-  p {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+p {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding-top: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 25px;
 }
-.signoff {
-  margin-left: 25px;
-  margin-top: 15px;
-  font-weight: normal;
-  font-size: 18px;
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: white;
+  text-decoration: none;
 }
-.signoff .salutation {
-  margin-bottom: 15px;
-}
-.signoff .signature {
-  background-image: url("img/signature.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 211px 46px;
-  display: block;
-  width: 211px;
-  height: 46px;
-}
-.signoff .name {
-  width: 300px;
-  margin-top: -15px;
-  border-top: 0;
-  padding-left: 0;
-}
-@media (max-width: 600px) {
-  .signoff {
-    margin-left: 10px;
-  }
+a:hover,
+a:active {
+  color: white;
+  text-decoration: underline;
 }
 ::selection {
   background: #fff2a8;
@@ -159,42 +139,21 @@ p a:active {
 ::-moz-selection {
   background: #fff2a8;
 }
-.footer {
-  bottom: 0;
-  color: black;
-  left: 0;
-  font-size: 16px;
+.pin-bottom-left {
   padding-top: 0;
-  padding-bottom: 28px;
+  padding-left: 10px;
+  padding-right: 0;
+  padding-bottom: 10px;
   position: absolute;
-  width: 100%;
-  vertical-align: middle;
-  text-align: center;
-  font-family: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+  bottom: 0px;
+  left: 0px;
 }
-.footer a,
-.footer a:link,
-.footer a:visited,
-.footer a:hover {
-  font-weight: normal;
-  text-decoration: none;
-  color: black;
-}
-.footer a:hover,
-.footer a:active {
-  text-decoration: underline;
-}
-.footer .divider {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-@media (max-width: 600px) {
-  .footer {
-    position: relative;
-    margin-top: 50px;
-    margin-bottom: -1px;
-    margin-left: -1px;
-    width: calc(100% + 2px);
-    padding-bottom: 8px;
-  }
+.pin-bottom-right {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0px;
 }
