@@ -1,11 +1,13 @@
 body {
   background-color: #BDC3C7;
-  margin: 0;
   padding: 30px;
+  margin: 0;
   font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
 }
 @media (max-width: 600px) {
   body {
+    height: 100%;
+    width: 100%;
     padding: 0;
     margin-bottom: 0;
   }
@@ -24,7 +26,12 @@ body {
 }
 @media (max-width: 600px) {
   .card {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
     box-shadow: none;
+    top: 0;
+    left: 0;
   }
 }
 .border-a {
@@ -60,11 +67,31 @@ body {
   border-radius: 0;
   border: 1px solid white;
 }
+@media (max-width: 600px) {
+  .border-a,
+  .border-b,
+  .border-c,
+  .border-d {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
 .content {
   height: calc(800px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px));
   width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px));
   margin: 6px;
   padding: 0;
+}
+@media (max-width: 600px) {
+  .content {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    margin: 0;
+  }
 }
 .bg0 {
   background-color: color1;
@@ -121,6 +148,13 @@ p {
   margin-left: auto;
   margin-right: auto;
   padding: 0;
+}
+@media (max-width: 600px) {
+  p {
+    width: calc(100% - (2 * 5px));
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 a,
 a:link,
@@ -185,6 +219,19 @@ a:active {
 }
 .story .flex .detail-col .mar-b {
   margin-bottom: 5px;
+}
+@media (max-width: 600px) {
+  .story {
+    width: calc(100% - (2 * 5px) - 2px);
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .story .flex {
+    width: 100%;
+  }
+  .story .flex .detail-col {
+    width: calc(100% - 40px);
+  }
 }
 a .flex:hover .detail-col,
 a .flex:active .detail-col {
