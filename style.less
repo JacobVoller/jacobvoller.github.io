@@ -53,7 +53,8 @@ body {
 }
 
 .card {
-    height: @card-height;
+    min-height: @card-height;
+    height: auto;
     width: @card-width;
     
     border-radius: @card-radius;
@@ -63,9 +64,10 @@ body {
 
     color: @color2;
     box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
+    margin-bottom: 25px;
 
     position: absolute;
-    top: calc(50% - (@card-height / 2));
+    top: 10px;
     left: calc(50% - (@card-width / 2));
 }
 @media (max-width: @small-screen-size) {
