@@ -11,16 +11,16 @@ body {
   }
 }
 .card {
-  height: 285px;
-  width: 500px;
+  height: 800px;
+  width: 600px;
   border-radius: 3px;
   border: 0;
-  background-color: #1b0369;
+  background-color: #061e5c;
   color: white;
   box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
   position: absolute;
-  top: calc(50% - (285px / 2));
-  left: calc(50% - (500px / 2));
+  top: calc(50% - (800px / 2));
+  left: calc(50% - (600px / 2));
 }
 @media (max-width: 600px) {
   .card {
@@ -28,8 +28,8 @@ body {
   }
 }
 .border-a {
-  height: calc(285px - (2 * 6px) - (2 * 2px) - (2 * 2px));
-  width: calc(500px - (2 * 6px) - (2 * 2px) - (2 * 2px));
+  height: calc(800px - (2 * 6px) - (2 * 2px) - (2 * 2px));
+  width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px));
   border-radius: 3px;
   border: 2px solid white;
   position: absolute;
@@ -37,8 +37,8 @@ body {
   padding: 2px;
 }
 .border-b {
-  height: calc(285px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
-  width: calc(500px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
+  height: calc(800px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
+  width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
   border-radius: 3px;
   border: 1px solid white;
   position: absolute;
@@ -46,8 +46,8 @@ body {
   padding: 0;
 }
 .border-c {
-  height: calc(285px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
-  width: calc(500px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
+  height: calc(800px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
+  width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
   border-radius: 0;
   border: 2px dashed white;
   position: absolute;
@@ -55,22 +55,22 @@ body {
   padding: 0;
 }
 .border-d {
-  height: calc(285px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
-  width: calc(500px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
+  height: calc(800px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
+  width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
   border-radius: 0;
   border: 1px solid white;
 }
 .content {
-  height: calc(285px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px));
-  width: calc(500px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px));
+  height: calc(800px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px));
+  width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px));
   margin: 6px;
   padding: 0;
 }
 .bg0 {
-  background-color: #1b0369;
+  background-color: color1;
 }
 .bg1 {
-  background: radial-gradient(#0d0231 3px, transparent 4px), radial-gradient(#0d0231 3px, transparent 4px), linear-gradient(#1b0369 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #0d0231 75px, #0d0231 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #0d0231 76px, #0d0231 77px, transparent 78px, transparent 109px), #1b0369;
+  background: radial-gradient(#030e2b 3px, transparent 4px), radial-gradient(#030e2b 3px, transparent 4px), linear-gradient(#061e5c 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #030e2b 75px, #030e2b 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #030e2b 76px, #030e2b 77px, transparent 78px, transparent 109px), #061e5c;
   background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 }
@@ -81,7 +81,7 @@ h1 {
   text-transform: capitalize;
   text-align: center;
   color: white;
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  text-shadow: -1px -1px 0 #030e2b, 1px -1px 0 #030e2b, -1px 1px 0 #030e2b, 1px 1px 0 #030e2b;
   margin: 0;
 }
 h2 {
@@ -96,17 +96,18 @@ h2 {
   margin-right: 0;
   margin-bottom: 0;
 }
-h4 {
-  font-size: 14px;
-  font-weight: 500;
+h3 {
+  font-size: 16px;
+  font-weight: 700;
   font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
   color: white;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
+  width: 100%;
 }
 p {
   font-size: 16px;
@@ -114,11 +115,12 @@ p {
   font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
   color: white;
   text-align: center;
-  margin: 0;
-  padding-top: 0;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 25px;
+  width: 450px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
 }
 a,
 a:link,
@@ -128,32 +130,70 @@ a:active {
   color: white;
   text-decoration: none;
 }
-a:hover,
-a:active {
+.story {
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0;
+  text-align: left;
+}
+.story .flex {
+  height: 100%;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+.story .flex .icon-col {
+  height: 100%;
+  width: 40px;
+  float: left;
+  text-align: center;
+  vertical-align: middle;
+  background: white;
+  line-height: 50px;
+}
+.story .flex .icon-col .fa {
+  color: #061e5c;
+}
+.story .flex .detail-col {
+  height: 100%;
+  width: calc(450px - 40px);
+  float: left;
   color: white;
-  text-decoration: underline;
+  background-color: #061e5c;
+}
+.story .flex .detail-col .row {
+  width: calc(450px - 40px);
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+}
+.story .flex .detail-col .row.single {
+  height: 100%;
+  line-height: calc(50px - (2 * 5px));
+  vertical-align: middle;
+}
+.story .flex .detail-col .row.title {
+  font-weight: 900;
+}
+.story .flex .detail-col .mar-t {
+  margin-top: 5px;
+}
+.story .flex .detail-col .mar-b {
+  margin-bottom: 5px;
+}
+a .flex:hover .detail-col,
+a .flex:active .detail-col {
+  color: #061e5c;
+  background-color: white;
 }
 ::selection {
   background: #fff2a8;
 }
 ::-moz-selection {
   background: #fff2a8;
-}
-.pin-bottom-left {
-  padding-top: 0;
-  padding-left: 10px;
-  padding-right: 0;
-  padding-bottom: 10px;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-}
-.pin-bottom-right {
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  position: absolute;
-  bottom: 0;
-  right: 0px;
 }
