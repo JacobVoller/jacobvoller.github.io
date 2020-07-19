@@ -1,9 +1,36 @@
+@color1: #061e5c;
+@color2: white;
+@color3: #0080d6;
+@accent-color: #030e2b;
+@highlight-color: #fff2a8;
+
 @text-font: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;;
 @elegant-font: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
 
 @large-screen-margin: 25px;
 @small-screen-margin: 10px;
 @small-screen-size: 600px;
+
+@card-height: 800px;
+@card-width: 600px;
+@card-radius: 3px;
+
+@card-border-margin: 6px;
+@card-border-padding: 2px;
+@card-border-color: @color2;
+
+@border-a-width: 2px;
+
+@inner-border-outside-width: 1px;
+@inner-border-inside-width: 2px;
+
+@content-margin: 6px;
+
+@story-height: 50px;
+@story-width: 450px;
+@icon-col-width: 40px;
+@detail-col-left-padding: 5px;
+@details-margin: 5px;
 
 body {
     background-color: #BDC3C7;
@@ -18,13 +45,6 @@ body {
     }
 }
 
-@card-height: 285px;
-@card-width: 500px;
-@card-radius: 3px;
-@primary-color: #1b0369;
-//@primary-color: white;
-@opposite-color: white;
-
 .card {
     height: @card-height;
     width: @card-width;
@@ -32,27 +52,20 @@ body {
     border-radius: @card-radius;
     border: 0;
 
-    background-color: @primary-color;
+    background-color: @color1;
 
-    color: @opposite-color;
+    color: @color2;
     box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
 
     position: absolute;
     top: calc(50% - (@card-height / 2));
     left: calc(50% - (@card-width / 2));
 }
-
 @media (max-width: @small-screen-size) {
     .card {
         box-shadow: none;
     }
 }
-
-@card-border-margin: 6px;
-@card-border-padding: 2px;
-@card-border-color: @opposite-color;
-
-@border-a-width: 2px;
 
 .border-a {
     height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width));
@@ -65,9 +78,6 @@ body {
     margin: @card-border-margin;
     padding: @card-border-padding;
 }
-
-@inner-border-outside-width: 1px;
-@inner-border-inside-width: 2px;
 
 .border-b {
     height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width));
@@ -101,8 +111,6 @@ body {
     border: @inner-border-outside-width solid @card-border-color;
 }
 
-@content-margin: 6px;
-
 .content {
     height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width) - (2 * @content-margin));
     width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width) - (2 * @content-margin));
@@ -111,20 +119,18 @@ body {
     padding: 0;
 }
 
-@accent-color: #0d0231;
-
 .bg0 {
-    background-color: @primary-color;
+    background-color: color1;
 }
 
 .bg1 {
     background:
         radial-gradient(@accent-color 3px, transparent 4px),
         radial-gradient(@accent-color 3px, transparent 4px),
-        linear-gradient(@primary-color 4px, transparent 0),
+        linear-gradient(@color1 4px, transparent 0),
         linear-gradient(45deg, transparent 74px, transparent 75px, @accent-color 75px, @accent-color 76px, transparent 77px, transparent 109px),
         linear-gradient(-45deg, transparent 75px, transparent 76px, @accent-color 76px, @accent-color 77px, transparent 78px, transparent 109px),
-        @primary-color;
+        @color1;
     background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
     background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 }
@@ -137,8 +143,12 @@ h1 {
     text-transform: capitalize;
     text-align: center;
 
-    color: @opposite-color;
-    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    color: @color2;
+    text-shadow:
+        -1px -1px 0 @accent-color,
+        1px -1px 0 @accent-color,
+        -1px 1px 0 @accent-color,
+        1px 1px 0 @accent-color;
 
     margin: 0;
 }
@@ -147,7 +157,7 @@ h2 {
     font-size: 24px;
     font-weight: 700;
     font-family: @elegant-font;
-    color: @opposite-color;
+    color: @color2;
     
     text-transform: uppercase;
     text-align: center;
@@ -158,34 +168,39 @@ h2 {
     margin-bottom: 0;
 }
 
-h4 {
-    font-size: 14px;
-    font-weight: 500;
+h3 {
+    font-size: 16px;
+    font-weight: 700;
     font-family: @text-font;
-    color: @opposite-color;
-
+    color: @color2;
+    
     text-transform: uppercase;
     text-align: center;
 
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
+
+    width: 100%;
 }
 
 p {
     font-size: 16px;
     font-weight: 500;
     font-family: @text-font;
-    color: @opposite-color;
+    color: @color2;
 
     text-align: center;
     
-    margin: 0;
-    padding-top: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 25px;
+    width: @story-width;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 0;
 }
 
 a,
@@ -193,45 +208,99 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-    color: @opposite-color;
+    color: @color2;
     text-decoration: none;
 }
 
-a:hover,
-a:active {
-    color: @opposite-color;
-    text-decoration: underline;
+.story {
+    height: @story-height;
+    width: 100%;
+
+    margin-top: 10px;
+    padding: 0;
+
+    text-align: left;
+
+    .flex {
+        height: 100%;
+        width: @story-width;
+        
+        margin-left: auto;
+        margin-right: auto;
+
+        border: 1px solid @color2;
+        border-radius: @card-radius;
+
+        .icon-col {
+            height: 100%;
+            width: @icon-col-width;
+            float: left;
+            
+            text-align: center;
+            vertical-align: middle;
+    
+            background: @color2;
+    
+            line-height: @story-height;
+    
+            .fa {
+                color: @color1;
+            }
+        }
+
+        .detail-col {
+            height: 100%;
+            width: calc(@story-width - @icon-col-width);
+            float: left;
+    
+            color: @color2;
+            background-color: @color1;
+    
+            .row {
+                width: calc(@story-width - @icon-col-width);
+    
+                padding-left: 10px;
+                padding-right: 10px;
+    
+                font-size: 16px;
+                font-weight: 500;
+                font-family: @text-font;
+            }
+    
+            .row.single {
+                height: 100%;
+                line-height: calc(@story-height - (2 * @details-margin));
+                vertical-align: middle;
+            }
+    
+            .row.title {
+                font-weight: 900;
+            }
+    
+            .mar-t {
+                margin-top: @details-margin;
+            }
+    
+            .mar-b {
+                margin-bottom: @details-margin;
+            }
+        }
+    }
 }
 
-@highlight-color: #fff2a8;
+a {
+    .flex:hover,
+    .flex:active {
+        .detail-col {
+            color: @color1;
+            background-color: @color2;
+        }
+    }
+}
 
 ::selection {
     background: @highlight-color;
 }
 ::-moz-selection {
     background: @highlight-color;
-}
-
-@pinned-spacing: 10px;
-
-.pin-bottom-left {
-    padding-top: 0;
-    padding-left: @pinned-spacing;
-    padding-right: 0;
-    padding-bottom: @pinned-spacing;
-
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-}
-
-.pin-bottom-right {
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: @pinned-spacing;
-    padding-bottom: @pinned-spacing;
-
-    position: absolute;
-    bottom: 0;
-    right: 0px;
 }
