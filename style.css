@@ -151,9 +151,9 @@ p {
 }
 @media (max-width: 600px) {
   p {
-    width: calc(100% - (2 * 5px));
-    margin-left: 5px;
-    margin-right: 5px;
+    width: calc(100% - (2 * 10px));
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 a,
@@ -222,9 +222,9 @@ a:active {
 }
 @media (max-width: 600px) {
   .story {
-    width: calc(100% - (2 * 5px) - 2px);
-    margin-left: 5px;
-    margin-right: 5px;
+    width: calc(100% - (2 * 10px) - 2px);
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .story .flex {
     width: 100%;
