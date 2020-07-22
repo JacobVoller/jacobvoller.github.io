@@ -194,6 +194,9 @@ a:active {
 }
 .story .flex .icon-col .fa {
   color: #061e5c;
+  line-height: 24px;
+  font-size: 24px;
+  vertical-align: middle;
 }
 .story .flex .detail-col {
   height: 100%;
