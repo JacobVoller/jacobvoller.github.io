@@ -84,11 +84,11 @@ body {
   }
 }
 .content {
-  height: calc(850px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px) - 20px);
+  height: calc(850px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px) - 14px);
   width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px));
   margin: 6px;
   padding: 0;
-  padding-top: 20px;
+  padding-top: 14px;
 }
 @media (max-width: 600px) {
   .content {
@@ -183,7 +183,7 @@ a:active {
   text-align: left;
 }
 .tile {
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 3px;
   background-color: #061e5c;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
@@ -231,8 +231,8 @@ a:active {
   text-align: left;
 }
 .tile.vertical {
-  height: calc(calc(450px / 2) - 5px - (2 * 1px));
-  width: calc(calc(450px / 2) - 5px - (2 * 1px));
+  height: calc(calc(450px / 2) - 5px - (2 * 2px));
+  width: calc(calc(450px / 2) - 5px - (2 * 2px));
   float: left;
   margin-top: 0;
   margin-left: 0px;
@@ -256,13 +256,13 @@ a:active {
   margin-right: 0;
 }
 .tile.vertical .graphic {
-  width: calc(calc(450px / 2) - 5px - (2 * 1px));
+  width: calc(calc(450px / 2) - 5px - (2 * 2px));
 }
 .tile.vertical .graphic .logo {
   width: 140px;
   height: 140px;
-  margin-left: calc((calc(calc(450px / 2) - 5px - (2 * 1px)) - 140px) / 2);
-  margin-right: calc((calc(calc(450px / 2) - 5px - (2 * 1px)) - 140px) / 2);
+  margin-left: calc((calc(calc(450px / 2) - 5px - (2 * 2px)) - 140px) / 2);
+  margin-right: calc((calc(calc(450px / 2) - 5px - (2 * 2px)) - 140px) / 2);
   background-repeat: no-repeat;
   background-size: 140px 140px;
   display: inline-block;
