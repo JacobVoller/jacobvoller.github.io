@@ -14,7 +14,7 @@ body {
   }
 }
 .card {
-  min-height: 800px;
+  min-height: 850px;
   height: auto;
   width: 600px;
   border-radius: 3px;
@@ -39,7 +39,7 @@ body {
   }
 }
 .border-a {
-  height: calc(800px - (2 * 6px) - (2 * 2px) - (2 * 2px));
+  height: calc(850px - (2 * 6px) - (2 * 2px) - (2 * 2px));
   width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px));
   border-radius: 3px;
   border: 2px solid white;
@@ -48,7 +48,7 @@ body {
   padding: 2px;
 }
 .border-b {
-  height: calc(800px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
+  height: calc(850px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
   width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
   border-radius: 3px;
   border: 1px solid white;
@@ -57,7 +57,7 @@ body {
   padding: 0;
 }
 .border-c {
-  height: calc(800px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
+  height: calc(850px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
   width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
   border-radius: 0;
   border: 2px dashed white;
@@ -66,7 +66,7 @@ body {
   padding: 0;
 }
 .border-d {
-  height: calc(800px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
+  height: calc(850px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
   width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
   border-radius: 0;
   border: 1px solid white;
@@ -84,7 +84,7 @@ body {
   }
 }
 .content {
-  height: calc(800px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px) - 20px);
+  height: calc(850px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px) - 20px);
   width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px));
   margin: 6px;
   padding: 0;
@@ -156,7 +156,7 @@ p {
   text-align: left;
   width: 450px;
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
