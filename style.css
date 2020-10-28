@@ -1,75 +1,75 @@
 body {
-  background-color: #BDC3C7;
-  padding: 30px;
   margin: 0;
+  padding: 30px;
+  background-color: #BDC3C7;
   font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
 }
 @media (max-width: 600px) {
   body {
     height: 100%;
     width: 100%;
-    padding: 0;
     margin: 0;
+    padding: 0;
     background-color: #061e5c;
   }
 }
 .card {
-  min-height: 850px;
   height: auto;
+  min-height: 850px;
   width: 600px;
-  border-radius: 3px;
-  border: 0;
-  background-color: #061e5c;
-  color: white;
-  box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
   margin-bottom: 25px;
-  position: absolute;
   top: 10px;
   left: calc(50% - (600px / 2));
+  color: white;
+  background-color: #061e5c;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
+  position: absolute;
 }
 @media (max-width: 600px) {
   .card {
     height: 100%;
     width: 100%;
-    border-radius: 0;
-    box-shadow: none;
+    margin: 0;
     top: 0;
     left: 0;
-    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 }
 .border-a {
   height: calc(850px - (2 * 6px) - (2 * 2px) - (2 * 2px));
   width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px));
-  border-radius: 3px;
-  border: 2px solid white;
-  position: absolute;
   margin: 6px;
   padding: 2px;
+  border: 2px solid white;
+  border-radius: 3px;
+  position: absolute;
 }
 .border-b {
   height: calc(850px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
   width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
-  border-radius: 3px;
-  border: 1px solid white;
-  position: absolute;
   margin: 0;
   padding: 0;
+  border: 1px solid white;
+  border-radius: 3px;
+  position: absolute;
 }
 .border-c {
   height: calc(850px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
   width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
-  border-radius: 0;
-  border: 2px dashed white;
-  position: absolute;
   margin: 0;
   padding: 0;
+  border: 2px dashed white;
+  border-radius: 0;
+  position: absolute;
 }
 .border-d {
   height: calc(850px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
   width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
-  border-radius: 0;
   border: 1px solid white;
+  border-radius: 0;
 }
 @media (max-width: 600px) {
   .border-a,
@@ -78,9 +78,9 @@ body {
   .border-d {
     height: 100%;
     width: 100%;
-    border: 0;
     margin: 0;
     padding: 0;
+    border: 0;
   }
 }
 .content {
@@ -94,8 +94,8 @@ body {
   .content {
     height: 100%;
     width: 100%;
-    border: 0;
     margin: 0;
+    border: 0;
   }
 }
 .textured-background {
@@ -104,62 +104,62 @@ body {
   background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
 }
 h1 {
+  margin: 0;
+  color: white;
   font-size: 44px;
   font-weight: 700;
   font-family: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
   text-transform: capitalize;
   text-align: center;
-  color: white;
   text-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
-  margin: 0;
 }
 h2 {
+  margin-top: -10px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  color: white;
   font-size: 24px;
   font-weight: 700;
   font-family: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
   text-transform: uppercase;
   text-align: center;
-  color: white;
   text-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
-  margin-top: -10px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0;
 }
 h3 {
-  font-size: 16px;
-  font-weight: 700;
-  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
+  width: 100%;
   margin-top: 20px;
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
-  width: 100%;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+  text-transform: uppercase;
+  text-align: center;
 }
 h4 {
+  height: 100%;
+  margin: 0;
   font-size: 16px;
   font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
   font-weight: 500;
-  height: 100%;
   vertical-align: middle;
   text-align: left;
-  margin: 0;
 }
 p {
-  font-size: 16px;
-  font-weight: 500;
-  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
-  color: white;
-  text-align: left;
   width: 450px;
   margin-top: 20px;
   margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+  text-align: left;
 }
 @media (max-width: 600px) {
   p {
@@ -183,25 +183,25 @@ a:active {
   text-align: left;
 }
 .tile {
+  background-color: #061e5c;
   border: 2px solid white;
   border-radius: 3px;
-  background-color: #061e5c;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
 }
 .tile.horizontal {
   height: 50px;
   width: 450px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
 }
 .tile.horizontal .graphic {
   height: 100%;
   width: 40px;
+  background: white;
   float: left;
   text-align: center;
   vertical-align: middle;
-  background: white;
   line-height: 50px;
 }
 .tile.horizontal .graphic .fa {
@@ -212,11 +212,11 @@ a:active {
 }
 .tile.horizontal .detail {
   height: 100%;
-  padding: 0;
   width: calc(450px - 40px);
-  float: left;
+  padding: 0;
   color: white;
   background-color: #061e5c;
+  float: left;
 }
 .tile.horizontal .detail h4 {
   margin-left: 10px;
@@ -225,18 +225,18 @@ a:active {
 .vertical-tile-aligner {
   width: 450px;
   margin-top: 10px;
-  padding: 0;
   margin-left: auto;
   margin-right: auto;
+  padding: 0;
   text-align: left;
 }
 .tile.vertical {
   height: calc(calc(450px / 2) - 5px - (2 * 2px));
   width: calc(calc(450px / 2) - 5px - (2 * 2px));
-  float: left;
   margin-top: 0;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
+  float: left;
 }
 .tile.vertical .detail h4 {
   margin-top: 5px;
@@ -246,14 +246,14 @@ a:active {
   font-size: 14px;
 }
 .tile.vertical .detail p {
+  width: 100%;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 13px;
-  width: 100%;
-  text-align: center;
-  padding: 0;
   margin-left: 0;
   margin-right: 0;
+  padding: 0;
+  font-size: 13px;
+  text-align: center;
 }
 .tile.vertical .graphic {
   width: calc(calc(450px / 2) - 5px - (2 * 2px));

@@ -35,10 +35,11 @@
 @mobile-story-margin: 10px;
 
 body {
-    background-color: #BDC3C7;
+    margin: 0;
 
     padding: 30px;
-    margin: 0;
+
+    background-color: #BDC3C7;
 
     font-family: @text-font;
 }
@@ -47,42 +48,46 @@ body {
         height: 100%;
         width: 100%;
         
-        padding: 0;
         margin: 0;
+
+        padding: 0;
 
         background-color: @color1;
     }
 }
 
 .card {
-    min-height: @card-height;
     height: auto;
+    min-height: @card-height;
     width: @card-width;
-    
-    border-radius: @card-radius;
-    border: 0;
 
-    background-color: @color1;
-
-    color: @color2;
-    box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
     margin-bottom: 25px;
-
-    position: absolute;
+    
     top: 10px;
     left: calc(50% - (@card-width / 2));
+
+    color: @color2;
+    background-color: @color1;
+
+    border: 0;
+    border-radius: @card-radius;
+
+    box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
+    position: absolute;
 }
 @media (max-width: @small-screen-size) {
     .card {
         height: 100%;
         width: 100%;
 
-        border-radius: 0;
-        box-shadow: none;
+        margin: 0;
 
         top: 0;
         left: 0;
-        margin: 0;
+
+        border-radius: 0;
+
+        box-shadow: none;
     }
 }
 
@@ -90,44 +95,50 @@ body {
     height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width));
     width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width));
 
-    border-radius: @card-radius;
-    border: @border-a-width solid @card-border-color;
-
-    position: absolute;
     margin: @card-border-margin;
+
     padding: @card-border-padding;
+
+    border: @border-a-width solid @card-border-color;
+    border-radius: @card-radius;
+    
+    position: absolute;
 }
 
 .border-b {
     height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width));
     width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width));
     
-    border-radius: @card-radius;
-    border: @inner-border-outside-width solid @card-border-color;
-
-    position: absolute;
     margin: 0;
+
     padding: 0;
+
+    border: @inner-border-outside-width solid @card-border-color;
+    border-radius: @card-radius;
+    
+    position: absolute;
 }
 
 .border-c {
     height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width) - (2 * @inner-border-inside-width));
     width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width) - (2 * @inner-border-inside-width));
 
-    border-radius: 0;
-    border: @inner-border-inside-width dashed @card-border-color;
-
-    position: absolute;
     margin: 0;
+
     padding: 0;
+
+    border: @inner-border-inside-width dashed @card-border-color;
+    border-radius: 0;
+    
+    position: absolute;
 }
 
 .border-d {
     height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width));
     width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width));
 
-    border-radius: 0;
     border: @inner-border-outside-width solid @card-border-color;
+    border-radius: 0;
 }
 
 @media (max-width: @small-screen-size) {
@@ -138,10 +149,11 @@ body {
         height: 100%;
         width: 100%;
 
-        border: 0;
-
         margin: 0;
+
         padding: 0;
+
+        border: 0;
     }
 }
 
@@ -152,6 +164,7 @@ body {
     width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width) - (2 * @content-margin));
 
     margin: @content-margin;
+
     padding: 0;
     padding-top: @h1-top-margin;
 }
@@ -160,9 +173,9 @@ body {
         height: 100%;
         width: 100%;
 
-        border: 0;
-
         margin: 0;
+
+        border: 0;
     }
 }
 
@@ -179,79 +192,73 @@ body {
 }
 
 h1 {
+    margin: 0;
+
+    color: @color2;
+    
     font-size: 44px;
     font-weight: 700;
     font-family: @elegant-font;
-
     text-transform: capitalize;
     text-align: center;
-
-    color: @color2;
     text-shadow:
         0 5px 4px rgba(0,0,0,.7),
         0 9px 14px rgba(0,0,0,.4),
         0 19px 24px rgba(0,0,0,.4);
-
-    margin: 0;
 }
 
 h2 {
+    margin-top: -10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    
+    color: @color2;
+
     font-size: 24px;
     font-weight: 700;
     font-family: @elegant-font;
 
     text-transform: uppercase;
     text-align: center;
-
-    color: @color2;
     text-shadow:
         0 5px 4px rgba(0,0,0,.7),
         0 9px 14px rgba(0,0,0,.4),
         0 19px 24px rgba(0,0,0,.4);
-    
-    margin-top: -10px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
 }
 
 h3 {
-    font-size: 16px;
-    font-weight: 700;
-    font-family: @text-font;
-    color: @color2;
+    width: 100%;
     
-    text-transform: uppercase;
-    text-align: center;
-
     margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
+    
+    color: @color2;
+    
+    font-size: 16px;
+    font-weight: 700;
+    font-family: @text-font;
 
-    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 h4 {
+    height: 100%;
+    
+    margin: 0;
+    
     font-size: 16px;
     font-family: @text-font;
     font-weight: 500;
-    height: 100%;
-    
+
     vertical-align: middle;
     text-align: left;
-
-    margin: 0;
 }
 
 p {
-    font-size: 16px;
-    font-weight: 500;
-    font-family: @text-font;
-    color: @color2;
-
-    text-align: left;
-    
     width: @story-width;
 
     margin-top: 20px;
@@ -260,10 +267,19 @@ p {
     margin-right: auto;
 
     padding: 0;
+
+    color: @color2;
+    
+    font-size: 16px;
+    font-weight: 500;
+    font-family: @text-font;
+
+    text-align: left;
 }
 @media (max-width: @small-screen-size) {
     p {
         width: calc(100% - (2 * @mobile-story-margin));
+
         margin-left: @mobile-story-margin;
         margin-right: @mobile-story-margin;
     }
@@ -275,6 +291,7 @@ a:visited,
 a:hover,
 a:active {
     color: @color2;
+
     text-decoration: none;
 }
 
@@ -282,6 +299,7 @@ a:active {
     width: 100%;
 
     margin-top: 10px;
+
     padding: 0;
 
     text-align: left;
@@ -290,9 +308,10 @@ a:active {
 @tile-border-width: 2px;
 
 .tile {
+    background-color: @color1;
+    
     border: @tile-border-width solid @color2;
     border-radius: @card-radius;
-    background-color: @color1;
 
     box-shadow:
         0 5px 4px rgba(0,0,0,.7),
@@ -304,22 +323,24 @@ a:active {
     height: @story-height;
     width: @story-width;
     
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
 
     .graphic {
         height: 100%;
         width: @icon-col-width;
+
+        background: @color2;
+
         float: left;
-        
         text-align: center;
         vertical-align: middle;
-        background: @color2;
         line-height: @story-height;
 
         .fa {
             color: @color1;
+
             line-height: 24px;
             font-size: 24px;
             vertical-align: middle;
@@ -328,13 +349,14 @@ a:active {
 
     .detail {
         height: 100%;
-
-        padding: 0;
         width: calc(@story-width - @icon-col-width);
 
-        float: left;
+        padding: 0;
+
         color: @color2;
         background-color: @color1;
+        
+        float: left;
 
         h4 {
             margin-left: 10px;
@@ -352,9 +374,10 @@ a:active {
     width: @story-width;
 
     margin-top: 10px;
-    padding: 0;
     margin-left: auto;
     margin-right: auto;
+
+    padding: 0;
 
     text-align: left;
 }
@@ -362,15 +385,17 @@ a:active {
 .tile.vertical {
     height: @vertical-tile-size;
     width: @vertical-tile-size;
-    float: left;
 
     margin-top: 0;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
+
+    float: left;
 
     .detail {
         h4 {
             margin-top: 5px;
+
             text-align: center;
 
             .sm {
@@ -379,14 +404,18 @@ a:active {
         }
 
         p {
+            width: 100%;
+
             margin-top: 5px;
             margin-bottom: 5px;
-            font-size: 13px;
-            width: 100%;
-            text-align: center;
-            padding: 0;
             margin-left: 0;
             margin-right: 0;
+
+            padding: 0;
+
+            font-size: 13px;
+
+            text-align: center;
         }
     }
 
@@ -399,11 +428,13 @@ a:active {
         .logo {
             width: @image-size;
             height: @image-size;
+
             margin-left: @image-margin;
             margin-right: @image-margin;
 
             background-repeat: no-repeat;
             background-size: @image-size @image-size;
+
             display: inline-block;
         }
 
@@ -438,6 +469,7 @@ a {
         .detail {
             color: @color1;
             background-color: @color2;
+
             transition: @transition-time;
         }
     }
