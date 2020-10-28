@@ -279,10 +279,14 @@ a:active {
 .vertical.tile.right {
   margin-left: 5px;
 }
+a .tile .detail {
+  transition: 0.5s;
+}
 a .tile:hover .detail,
 a .tile:active .detail {
   color: #061e5c;
   background-color: white;
+  transition: 0.5s;
 }
 ::selection {
   background: #fff;

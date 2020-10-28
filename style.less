@@ -425,12 +425,20 @@ a:active {
     margin-left: @vertical-tile-margin;
 }
 
+@transition-time: 0.5s;
 a {
+    .tile {
+        .detail {
+            transition: @transition-time;
+        }
+    }
+    
     .tile:hover,
     .tile:active {
         .detail {
             color: @color1;
             background-color: @color2;
+            transition: @transition-time;
         }
     }
 }
