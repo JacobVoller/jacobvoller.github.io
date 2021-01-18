@@ -1,8 +1,5 @@
-# Jacob C. Voller
-## SOFTWARE & STRATEGY
+# Jacob C. Voller - SOFTWARE & STRATEGY
 
-### CONTACT
+## CONTACT
 - https://www.linkedin.com/in/jacobvoller/
-
-### URL
-https://jacobvoller.com
+- https://jacobvoller.com
