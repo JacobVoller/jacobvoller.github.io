@@ -1,0 +1,419 @@
+@color1: #061e5c;
+@color2: white;
+@color3: #0080d6;
+@accent-color: #030e2b;
+@highlight-color: #fff;
+
+@text-font: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;;
+@elegant-font: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+
+@large-screen-margin: 25px;
+@small-screen-margin: 10px;
+@small-screen-size: 600px;
+
+@card-height: 2000px;
+@card-width: 600px;
+@card-radius: 3px;
+
+@card-border-margin: 6px;
+@card-border-padding: 2px;
+@card-border-color: @color2;
+
+@border-a-width: 2px;
+
+@inner-border-outside-width: 1px;
+@inner-border-inside-width: 2px;
+
+@content-margin: 6px;
+
+@story-height: 50px;
+@story-width: 450px;
+@icon-col-width: 40px;
+@detail-col-left-padding: 5px;
+@details-margin: 5px;
+
+@mobile-story-margin: 10px;
+
+body {
+    margin: 0;
+
+    padding: 30px;
+
+    background-color: #BDC3C7;
+
+    font-family: @text-font;
+}
+@media (max-width: @small-screen-size) {
+    body {
+        height: 100%;
+        width: 100%;
+        
+        margin: 0;
+
+        padding: 0;
+
+        background-color: @color1;
+    }
+}
+
+.card {
+    height: auto;
+    min-height: @card-height;
+    width: @card-width;
+
+    margin-bottom: 25px;
+    
+    top: 10px;
+    left: calc(50% - (@card-width / 2));
+
+    color: @color2;
+    background-color: @color1;
+
+    border: 0;
+    border-radius: @card-radius;
+
+    box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
+    position: absolute;
+}
+@media (max-width: @small-screen-size) {
+    .card {
+        height: 100%;
+        width: 100%;
+
+        margin: 0;
+
+        top: 0;
+        left: 0;
+
+        border-radius: 0;
+
+        box-shadow: none;
+    }
+}
+
+.border-a {
+    height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width));
+    width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width));
+
+    margin: @card-border-margin;
+
+    padding: @card-border-padding;
+
+    border: @border-a-width solid @card-border-color;
+    border-radius: @card-radius;
+    
+    position: absolute;
+}
+
+.border-b {
+    height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width));
+    width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width));
+    
+    margin: 0;
+
+    padding: 0;
+
+    border: @inner-border-outside-width solid @card-border-color;
+    border-radius: @card-radius;
+    
+    position: absolute;
+}
+
+.border-c {
+    height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width) - (2 * @inner-border-inside-width));
+    width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (2 * @inner-border-outside-width) - (2 * @inner-border-inside-width));
+
+    margin: 0;
+
+    padding: 0;
+
+    border: @inner-border-inside-width dashed @card-border-color;
+    border-radius: 0;
+    
+    position: absolute;
+}
+
+.border-d {
+    height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width));
+    width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width));
+
+    border: @inner-border-outside-width solid @card-border-color;
+    border-radius: 0;
+}
+
+@media (max-width: @small-screen-size) {
+    .border-a,
+    .border-b,
+    .border-c,
+    .border-d {
+        height: 100%;
+        width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+        border: 0;
+    }
+}
+
+@h1-top-margin: 14px;
+
+.content {
+    height: calc(@card-height - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width) - (2 * @content-margin) - @h1-top-margin);
+    width: calc(@card-width - (2 * @card-border-margin) - (2 * @card-border-padding) - (2 * @border-a-width) - (4 * @inner-border-outside-width) - (2 * @inner-border-inside-width) - (2 * @content-margin));
+
+    margin: @content-margin;
+
+    padding: 0;
+    padding-top: @h1-top-margin;
+}
+@media (max-width: @small-screen-size) {
+    .content {
+        height: 100%;
+        width: 100%;
+
+        margin: 0;
+
+        border: 0;
+    }
+}
+
+.textured-background {
+    background:
+        radial-gradient(@accent-color 3px, transparent 4px),
+        radial-gradient(@accent-color 3px, transparent 4px),
+        linear-gradient(@color1 4px, transparent 0),
+        linear-gradient(45deg, transparent 74px, transparent 75px, @accent-color 75px, @accent-color 76px, transparent 77px, transparent 109px),
+        linear-gradient(-45deg, transparent 75px, transparent 76px, @accent-color 76px, @accent-color 77px, transparent 78px, transparent 109px),
+        @color1;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+h1 {
+    margin: 0;
+
+    color: @color2;
+    
+    font-size: 44px;
+    font-weight: 700;
+    font-family: @elegant-font;
+    text-transform: capitalize;
+    text-align: center;
+    text-shadow:
+        0 5px 4px rgba(0,0,0,.7),
+        0 9px 14px rgba(0,0,0,.4),
+        0 19px 24px rgba(0,0,0,.4);
+}
+
+h2 {
+    margin-top: -10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    
+    color: @color2;
+
+    font-size: 21px;
+    font-weight: 700;
+    font-family: @elegant-font;
+
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow:
+        0 5px 4px rgba(0,0,0,.7),
+        0 9px 14px rgba(0,0,0,.4),
+        0 19px 24px rgba(0,0,0,.4);
+}
+
+h3 {
+    width: 100%;
+    
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    
+    color: @color2;
+    
+    font-size: 16px;
+    font-weight: 700;
+    font-family: @text-font;
+
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h4 {
+    height: 100%;
+    
+    margin: 0;
+    
+    font-size: 16px;
+    font-family: @text-font;
+    font-weight: 500;
+
+    vertical-align: middle;
+    text-align: left;
+}
+
+h5 {
+    height: 100%;
+    
+    margin: 0;
+    
+    font-size: 14px;
+    font-family: @text-font;
+    font-weight: 500;
+
+    vertical-align: middle;
+    text-align: left;
+}
+
+p {
+    width: @story-width;
+
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 0;
+
+    color: @color2;
+    
+    font-size: 16px;
+    font-weight: 500;
+    font-family: @text-font;
+
+    text-align: left;
+}
+@media (max-width: @small-screen-size) {
+    p {
+        width: calc(100% - (2 * @mobile-story-margin));
+
+        margin-left: @mobile-story-margin;
+        margin-right: @mobile-story-margin;
+    }
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: @color2;
+
+    text-decoration: none;
+}
+
+@tile-border-width: 2px;
+
+.tile.fixed {
+    height: @story-height;
+}
+
+.tile {
+    background-color: @color1;
+    
+    border: @tile-border-width solid @color2;
+    border-radius: @card-radius;
+
+    box-shadow:
+        0 5px 4px rgba(0,0,0,.7),
+        0 9px 14px rgba(0,0,0,.4),
+        0 19px 24px rgba(0,0,0,.4);
+
+    width: @story-width;
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .graphic {
+        height: 100%;
+        width: @icon-col-width;
+
+        background: @color2;
+
+        float: left;
+        text-align: center;
+        vertical-align: middle;
+        line-height: @story-height;
+
+        .fa,
+        .fas {
+            color: @color1;
+
+            line-height: 24px;
+            font-size: 24px;
+            vertical-align: middle;
+        }
+    }
+
+    .detail {
+        height: 100%;
+        width: calc(@story-width - @icon-col-width);
+
+        padding: 0;
+
+        color: @color2;
+        background-color: @color1;
+        
+        float: left;
+
+        h4 {
+            margin-left: 10px;
+            line-height: 50px;
+        }
+    }
+
+    .detail.two-lines {
+        h4 {
+            line-height: 25px;
+            height: 50%;
+        }
+
+        h5 {
+            line-height: 25px;
+            height: 50%;
+
+            margin-left: 10px;
+        }
+    }
+
+    @tile-p-padding: 6px;
+    p {
+        width: calc(@story-width - (2 * @tile-p-padding));
+        
+        margin: 0;
+        padding: @tile-p-padding;
+    }
+}
+
+@transition-time: 0.5s;
+a {
+    .tile {
+        .detail {
+            transition: @transition-time;
+        }
+    }
+    
+    .tile:hover,
+    .tile:active {
+        .detail {
+            color: @color1;
+            background-color: @color2;
+
+            transition: @transition-time;
+        }
+    }
+}
+
+::selection {
+    background: @highlight-color;
+}
+::-moz-selection {
+    background: @highlight-color;
+}

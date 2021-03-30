@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  padding: 30px;
+  background-color: #BDC3C7;
+  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+}
+@media (max-width: 600px) {
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #061e5c;
+  }
+}
+.card {
+  height: auto;
+  min-height: 2000px;
+  width: 600px;
+  margin-bottom: 25px;
+  top: 10px;
+  left: calc(50% - (600px / 2));
+  color: white;
+  background-color: #061e5c;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
+  position: absolute;
+}
+@media (max-width: 600px) {
+  .card {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+.border-a {
+  height: calc(2000px - (2 * 6px) - (2 * 2px) - (2 * 2px));
+  width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px));
+  margin: 6px;
+  padding: 2px;
+  border: 2px solid white;
+  border-radius: 3px;
+  position: absolute;
+}
+.border-b {
+  height: calc(2000px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
+  width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px));
+  margin: 0;
+  padding: 0;
+  border: 1px solid white;
+  border-radius: 3px;
+  position: absolute;
+}
+.border-c {
+  height: calc(2000px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
+  width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (2 * 1px) - (2 * 2px));
+  margin: 0;
+  padding: 0;
+  border: 2px dashed white;
+  border-radius: 0;
+  position: absolute;
+}
+.border-d {
+  height: calc(2000px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
+  width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px));
+  border: 1px solid white;
+  border-radius: 0;
+}
+@media (max-width: 600px) {
+  .border-a,
+  .border-b,
+  .border-c,
+  .border-d {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+.content {
+  height: calc(2000px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px) - 14px);
+  width: calc(600px - (2 * 6px) - (2 * 2px) - (2 * 2px) - (4 * 1px) - (2 * 2px) - (2 * 6px));
+  margin: 6px;
+  padding: 0;
+  padding-top: 14px;
+}
+@media (max-width: 600px) {
+  .content {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border: 0;
+  }
+}
+.textured-background {
+  background: radial-gradient(#030e2b 3px, transparent 4px), radial-gradient(#030e2b 3px, transparent 4px), linear-gradient(#061e5c 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #030e2b 75px, #030e2b 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #030e2b 76px, #030e2b 77px, transparent 78px, transparent 109px), #061e5c;
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+h1 {
+  margin: 0;
+  color: white;
+  font-size: 44px;
+  font-weight: 700;
+  font-family: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+  text-transform: capitalize;
+  text-align: center;
+  text-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
+}
+h2 {
+  margin-top: -10px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  font-family: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
+}
+h3 {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+h4 {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+  font-weight: 500;
+  vertical-align: middle;
+  text-align: left;
+}
+h5 {
+  height: 100%;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+  font-weight: 500;
+  vertical-align: middle;
+  text-align: left;
+}
+p {
+  width: 450px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Raleway", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+  text-align: left;
+}
+@media (max-width: 600px) {
+  p {
+    width: calc(100% - (2 * 10px));
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: white;
+  text-decoration: none;
+}
+.tile.fixed {
+  height: 50px;
+}
+.tile {
+  background-color: #061e5c;
+  border: 2px solid white;
+  border-radius: 3px;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
+  width: 450px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tile .graphic {
+  height: 100%;
+  width: 40px;
+  background: white;
+  float: left;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+.tile .graphic .fa,
+.tile .graphic .fas {
+  color: #061e5c;
+  line-height: 24px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+.tile .detail {
+  height: 100%;
+  width: calc(450px - 40px);
+  padding: 0;
+  color: white;
+  background-color: #061e5c;
+  float: left;
+}
+.tile .detail h4 {
+  margin-left: 10px;
+  line-height: 50px;
+}
+.tile .detail.two-lines h4 {
+  line-height: 25px;
+  height: 50%;
+}
+.tile .detail.two-lines h5 {
+  line-height: 25px;
+  height: 50%;
+  margin-left: 10px;
+}
+.tile p {
+  width: calc(450px - (2 * 6px));
+  margin: 0;
+  padding: 6px;
+}
+a .tile .detail {
+  transition: 0.5s;
+}
+a .tile:hover .detail,
+a .tile:active .detail {
+  color: #061e5c;
+  background-color: white;
+  transition: 0.5s;
+}
+::selection {
+  background: #fff;
+}
+::-moz-selection {
+  background: #fff;
+}
