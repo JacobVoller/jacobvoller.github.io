@@ -317,37 +317,43 @@ a:active {
     margin-right: auto;
 }
 
-@pad: 4px;
-
-.card-border {
-    border-radius: @standard-radius;
-}
-
-.border-a {
+@ring-pad: 4px;
+.ring-a {
     margin-top: 20px;
     margin-bottom: 20px;
 
-    padding: @pad;
+    padding: @ring-pad;
+
+    border-radius: @standard-radius;
+
+    box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
 }
 
-.border-b {
+.ring-b {
     border: 2px solid white;
-    padding: @pad;
+    padding: 0;
+    border-radius: @standard-radius;
 }
 
-.border-gap {
-    padding: @pad;
+.ring-c {
+    padding: @ring-pad;
+    border-radius: @standard-radius;
 }
 
-.border-solid-white {
+.ring-d {
     border: 2px solid white;
+    border-radius: @standard-radius;
 }
 
-.border-dashed-white {
+.ring-e {
     border: 2px dashed white;
     border-radius: 0px;
 }
 
-.border-f {
+.ring-f {
+    border: 2px solid white;
+}
 
+.ring-g {
+    padding: 10px;
 }

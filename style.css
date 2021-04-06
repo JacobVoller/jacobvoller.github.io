@@ -206,25 +206,33 @@ a:active .detail {
   margin-left: auto;
   margin-right: auto;
 }
-.card-border {
-  border-radius: 3px;
-}
-.border-a {
+.ring-a {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 4px;
+  border-radius: 3px;
+  box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
 }
-.border-b {
+.ring-b {
   border: 2px solid white;
-  padding: 4px;
+  padding: 0;
+  border-radius: 3px;
 }
-.border-gap {
+.ring-c {
   padding: 4px;
+  border-radius: 3px;
 }
-.border-solid-white {
+.ring-d {
   border: 2px solid white;
+  border-radius: 3px;
 }
-.border-dashed-white {
+.ring-e {
   border: 2px dashed white;
   border-radius: 0px;
+}
+.ring-f {
+  border: 2px solid white;
+}
+.ring-g {
+  padding: 10px;
 }
