@@ -13,12 +13,18 @@
 body {
     background-color: #BDC3C7;
 
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
     .container {
         background-color: @primary-color;
     }
 }
-
-
 
 h1 {
     margin: 0;
@@ -77,7 +83,13 @@ h4 {
 }
 
 p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
     color: @text-color;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 ul {
@@ -138,6 +150,23 @@ ul {
     border-radius: @standard-radius;
 
     background-color: @primary-color;
+
+    p {
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
+.tile:hover {
+    background-color: @text-color;
+    transition: @transition-time;
+
+    i,
+    h3,
+    p {
+        color: @primary-color;
+        transition: @transition-time;
+    }
 }
 
 @link-button-height: 50px;
@@ -263,6 +292,10 @@ a:active {
     width: 100%;
     text-align: center;
     vertical-align: middle;
+
+    p {
+        font-size: 12px;
+    }
 }
 
 .textured-background {
@@ -284,16 +317,37 @@ a:active {
     margin-right: auto;
 }
 
-::selection {
-    background: @highlight-color;
-}
-::-moz-selection {
-    background: @highlight-color;
+@pad: 4px;
+
+.card-border {
+    border-radius: @standard-radius;
 }
 
-// SM
-@media (max-width: 768px) {
-    .sm-display-none {
-        display: none;
-    }
+.border-a {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    padding: @pad;
+}
+
+.border-b {
+    border: 2px solid white;
+    padding: @pad;
+}
+
+.border-gap {
+    padding: @pad;
+}
+
+.border-solid-white {
+    border: 2px solid white;
+}
+
+.border-dashed-white {
+    border: 2px dashed white;
+    border-radius: 0px;
+}
+
+.border-f {
+
 }
