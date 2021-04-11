@@ -6,6 +6,7 @@
 @link-button-height: 50px;
 @link-button-icon-width: 40px;
 @link-button-border-width: 2px;
+@detail-left-margin: 10px;
 
 .icon {
     width: 100%;
@@ -37,7 +38,6 @@
 
     border: @link-button-border-width solid @text-color;
     border-radius: @standard-radius;
-
     
     height: @link-button-height;
 
@@ -67,7 +67,6 @@
         }
     }
 
-    @detail-left-margin: 10px;
     .detail {
         height: 100%;
         width: calc(@click-tile-width - @link-button-icon-width - (2 * @link-button-border-width));
@@ -78,42 +77,41 @@
         background-color: @primary-color;
         
         float: left;
-    }
 
-    .detail.single-line {
-        h4 {
-            margin: 0;
-            margin-left: @detail-left-margin;
-            line-height: @link-button-height;
-            vertical-align: middle;
-
-            font-size: 16px;
-        }
-    }
-
-    .detail.two-lines {
-        h4 {
-            line-height: calc(@link-button-height / 2);
-            height: 50%;
-            vertical-align: middle;
-
-            margin: 0;
-            margin-left: @detail-left-margin;
-
-            font-size: 16px;
+        .single-line {
+            h4 {
+                margin: 0;
+                margin-left: @detail-left-margin;
+                line-height: @link-button-height;
+                vertical-align: middle;
+    
+                font-size: 16px;
+            }
         }
 
-        h5 {
-            line-height: calc(@link-button-height / 2);
-            height: 50%;
-
-            margin: 0;
-            margin-left: @detail-left-margin;
-
-            vertical-align: middle;
+        .two-lines {
+            h4 {
+                line-height: calc(@link-button-height / 2);
+                height: 50%;
+                vertical-align: middle;
+    
+                margin: 0;
+                margin-left: @detail-left-margin;
+    
+                font-size: 16px;
+            }
+    
+            h5 {
+                line-height: calc(@link-button-height / 2);
+                height: 50%;
+    
+                margin: 0;
+                margin-left: @detail-left-margin;
+    
+                vertical-align: middle;
+            }
         }
     }
-
 }
 
 a {
