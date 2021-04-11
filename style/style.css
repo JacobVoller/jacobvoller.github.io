@@ -1,21 +1,32 @@
-body {
-  background-color: #BDC3C7;
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+.ring-a {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 4px;
+  border-radius: 3px;
+  box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
 }
-body .container {
-  background-color: #061e5c;
+.ring-b {
+  border: 2px solid white;
+  padding: 0;
+  border-radius: 3px;
+}
+.ring-c {
+  padding: 4px;
+  border-radius: 3px;
+}
+.ring-d {
+  border: 2px solid white;
+  border-radius: 3px;
+}
+.ring-e {
+  border: 2px dashed white;
+  border-radius: 0px;
+}
+.ring-f {
+  border: 2px solid white;
+}
+.ring-g {
+  padding: 10px;
 }
 h1 {
   margin: 0;
@@ -28,10 +39,8 @@ h1 {
   text-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
 }
 h2 {
+  margin: 0;
   margin-top: -5px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0;
   color: white;
   font-size: 32px;
   font-weight: 700;
@@ -61,33 +70,6 @@ p {
   font-size: 18px;
   font-weight: 500;
 }
-ul li a,
-ul li a:link,
-ul li a:visited {
-  color: white;
-  background-color: #061e5c;
-  border: 2px solid white;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  border-radius: 3px;
-  text-decoration: none;
-  transition: 0.5s;
-}
-ul li a:hover,
-ul li a:active {
-  color: #061e5c;
-  text-decoration: none;
-  transition: 0.5s;
-}
-.icon {
-  width: 100%;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 32px;
-  line-height: 32px;
-  background: transparent;
-  color: white;
-}
 .tile-shadow {
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
 }
@@ -112,14 +94,23 @@ ul li a:active {
   color: #061e5c;
   transition: 0.5s;
 }
+.icon {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 32px;
+  line-height: 32px;
+  background: transparent;
+  color: white;
+}
 .click-tile {
   width: 650px;
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 600px) {
-  body {
-    background-color: lightblue;
+@media (max-width: 650px) {
+  .click-tile {
+    width: 100%;
   }
 }
 .link-button {
@@ -189,6 +180,25 @@ a:active .detail {
   background-color: white !important;
   transition: 0.5s;
 }
+body {
+  background-color: #BDC3C7;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+body .container {
+  background-color: #061e5c;
+}
 .no-pad {
   padding: 0;
 }
@@ -217,34 +227,4 @@ a:active .detail {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-}
-.ring-a {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 4px;
-  border-radius: 3px;
-  box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
-}
-.ring-b {
-  border: 2px solid white;
-  padding: 0;
-  border-radius: 3px;
-}
-.ring-c {
-  padding: 4px;
-  border-radius: 3px;
-}
-.ring-d {
-  border: 2px solid white;
-  border-radius: 3px;
-}
-.ring-e {
-  border: 2px dashed white;
-  border-radius: 0px;
-}
-.ring-f {
-  border: 2px solid white;
-}
-.ring-g {
-  padding: 10px;
 }

@@ -1,0 +1,136 @@
+@import "variables.less";
+
+@click-tile-width: 650px;
+@icon-size: 32px;
+
+@link-button-height: 50px;
+@link-button-icon-width: 40px;
+@link-button-border-width: 2px;
+
+.icon {
+    width: 100%;
+
+    text-align: center;
+    vertical-align: middle;
+
+    font-size: @icon-size;
+    line-height: @icon-size;
+
+    background: transparent;
+    color: @text-color;
+}
+
+.click-tile {
+    width: @click-tile-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: @click-tile-width) {
+    .click-tile {
+      width: 100%;
+    }
+}
+
+.link-button {
+    background-color: @primary-color;
+
+    border: @link-button-border-width solid @text-color;
+    border-radius: @standard-radius;
+
+    
+    height: @link-button-height;
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .graphic {
+        height: 100%;
+        width: @link-button-icon-width;
+
+        background: @text-color;
+
+        float: left;
+        text-align: center;
+        vertical-align: middle;
+        line-height: @link-button-height;
+
+        .fa,
+        .fas,
+        .fab {
+            color: @primary-color;
+
+            line-height: 24px;
+            font-size: 24px;
+            vertical-align: middle;
+        }
+    }
+
+    @detail-left-margin: 10px;
+    .detail {
+        height: 100%;
+        width: calc(@click-tile-width - @link-button-icon-width - (2 * @link-button-border-width));
+
+        padding: 0;
+
+        color: @text-color;
+        background-color: @primary-color;
+        
+        float: left;
+    }
+
+    .detail.single-line {
+        h4 {
+            margin: 0;
+            margin-left: @detail-left-margin;
+            line-height: @link-button-height;
+            vertical-align: middle;
+
+            font-size: 16px;
+        }
+    }
+
+    .detail.two-lines {
+        h4 {
+            line-height: calc(@link-button-height / 2);
+            height: 50%;
+            vertical-align: middle;
+
+            margin: 0;
+            margin-left: @detail-left-margin;
+
+            font-size: 16px;
+        }
+
+        h5 {
+            line-height: calc(@link-button-height / 2);
+            height: 50%;
+
+            margin: 0;
+            margin-left: @detail-left-margin;
+
+            vertical-align: middle;
+        }
+    }
+
+}
+
+a {
+    .detail {
+        color: @text-color !important;
+        background-color: @primary-color !important;
+    
+        transition: @transition-time;
+    }
+}
+
+a:hover,
+a:active {
+    .detail {
+        color: @primary-color !important;
+        background-color: @text-color !important;
+    
+        transition: @transition-time;
+    }
+}
