@@ -170,9 +170,22 @@ ul {
 }
 
 @link-button-height: 50px;
-@link-button-width: 650px;
 @link-button-icon-width: 40px;
 @link-button-border-width: 2px;
+
+@click-tile-width: 650px;
+.click-tile {
+    width: @click-tile-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: @click-tile-width) {
+    .click-tile {
+      width: 100%;
+    }
+}
+
 
 .link-button {
     background-color: @primary-color;
@@ -180,7 +193,7 @@ ul {
     border: @link-button-border-width solid @text-color;
     border-radius: @standard-radius;
 
-    width: @link-button-width;
+    
     height: @link-button-height;
 
     margin-top: 10px;
@@ -308,6 +321,10 @@ a:active {
         @primary-color;
     background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
     background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+.mar-t-10 {
+    margin-top: 10px;
 }
 
 .fit-content {
