@@ -1,6 +1,5 @@
 @import "variables.less";
 
-@click-tile-width: 650px;
 @icon-size: 32px;
 
 @link-button-height: 50px;
@@ -25,15 +24,38 @@
     width: @click-tile-width;
     margin-left: auto;
     margin-right: auto;
+
+    a {
+        .detail {
+            color: @text-color !important;
+            background-color: @primary-color !important;
+        
+            transition: @transition-time;
+        }
+    }
+    
+    a:hover,
+    a:active {
+        .detail {
+            color: @primary-color !important;
+            background-color: @text-color !important;
+        
+            transition: @transition-time;
+        }
+    }
 }
 
 @media (max-width: @click-tile-width) {
     .click-tile {
-      width: 100%;
+      width: calc(100% - (2 * @content-margin));
+
+      .detail {
+        width: calc(100% - @link-button-icon-width - (2 * @link-button-border-width));
+      }
     }
 }
 
-.link-button {
+.bar {
     background-color: @primary-color;
 
     border: @link-button-border-width solid @text-color;
@@ -44,6 +66,8 @@
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+
+    box-shadow: @tile-shadow;
 
     .graphic {
         height: 100%;
@@ -69,66 +93,48 @@
 
     .detail {
         height: 100%;
-        width: calc(@click-tile-width - @link-button-icon-width - (2 * @link-button-border-width));
 
         padding: 0;
+        width: calc(100% - @link-button-icon-width);
 
         color: @text-color;
         background-color: @primary-color;
         
         float: left;
+    }
 
-        .single-line {
-            h4 {
-                margin: 0;
-                margin-left: @detail-left-margin;
-                line-height: @link-button-height;
-                vertical-align: middle;
-    
-                font-size: 16px;
-            }
-        }
-
-        .two-lines {
-            h4 {
-                line-height: calc(@link-button-height / 2);
-                height: 50%;
-                vertical-align: middle;
-    
-                margin: 0;
-                margin-left: @detail-left-margin;
-    
-                font-size: 16px;
-            }
-    
-            h5 {
-                line-height: calc(@link-button-height / 2);
-                height: 50%;
-    
-                margin: 0;
-                margin-left: @detail-left-margin;
-    
-                vertical-align: middle;
-            }
+    .single {
+        h4 {
+            margin: 0;
+            margin-left: @detail-left-margin;
+            line-height: calc(@link-button-height - (2 * @link-button-border-width));
+            vertical-align: middle;
         }
     }
-}
 
-a {
-    .detail {
-        color: @text-color !important;
-        background-color: @primary-color !important;
-    
-        transition: @transition-time;
-    }
-}
+    .double {
+        h4 {
+            line-height: calc(@link-button-height / 2);
+            height: 50%;
+            vertical-align: middle;
 
-a:hover,
-a:active {
-    .detail {
-        color: @primary-color !important;
-        background-color: @text-color !important;
-    
-        transition: @transition-time;
+            margin: 0;
+            margin-left: @detail-left-margin;
+
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        h5 {
+            line-height: calc(@link-button-height / 2);
+            height: 50%;
+
+            margin: 0;
+            margin-left: @detail-left-margin;
+
+            vertical-align: middle;
+        }
     }
+
+    
 }

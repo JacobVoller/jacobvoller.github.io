@@ -5,6 +5,12 @@
   border-radius: 3px;
   box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
 }
+@media (max-width: 650px) {
+  .ring-a {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
 .ring-b {
   border: 2px solid white;
   padding: 0;

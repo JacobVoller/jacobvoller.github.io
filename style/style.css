@@ -5,6 +5,12 @@
   border-radius: 3px;
   box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
 }
+@media (max-width: 650px) {
+  .ring-a {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
 .ring-b {
   border: 2px solid white;
   padding: 0;
@@ -33,12 +39,12 @@ h2,
 h3 {
   color: white;
   font-weight: 700;
-  text-transform: capitalize;
   text-align: center;
 }
 h1,
 h2 {
   font-family: "Cinzel", "Bookman Old Style", "Palatino Linotype", "Book Antiqua", Georgia, Palatino, serif;
+  text-transform: capitalize;
   text-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
   margin: 0;
 }
@@ -51,24 +57,22 @@ h2 {
 }
 h3 {
   font-size: 15px;
-  text-align: center;
+  text-transform: uppercase;
   vertical-align: middle;
   width: 100%;
 }
 h4 {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
+}
+h5 {
+  font-size: 14px;
+  font-weight: 400;
 }
 p {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
   color: white;
-  font-size: 18px;
-  font-weight: 500;
-}
-.tile-shadow {
-  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: 400;
 }
 .tile {
   margin: 2px;
@@ -76,9 +80,9 @@ p {
   border: 2px solid white;
   border-radius: 3px;
   background-color: #061e5c;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
 }
 .tile p {
-  font-size: 14px;
   width: 100%;
 }
 .tile:hover {
@@ -105,12 +109,26 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+.click-tile a .detail {
+  color: white !important;
+  background-color: #061e5c !important;
+  transition: 0.5s;
+}
+.click-tile a:hover .detail,
+.click-tile a:active .detail {
+  color: #061e5c !important;
+  background-color: white !important;
+  transition: 0.5s;
+}
 @media (max-width: 650px) {
   .click-tile {
-    width: 100%;
+    width: calc(100% - (2 * 10px));
+  }
+  .click-tile .detail {
+    width: calc(100% - 40px - (2 * 2px));
   }
 }
-.link-button {
+.bar {
   background-color: #061e5c;
   border: 2px solid white;
   border-radius: 3px;
@@ -118,8 +136,9 @@ p {
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
 }
-.link-button .graphic {
+.bar .graphic {
   height: 100%;
   width: 40px;
   background: white;
@@ -128,70 +147,59 @@ p {
   vertical-align: middle;
   line-height: 50px;
 }
-.link-button .graphic .fa,
-.link-button .graphic .fas,
-.link-button .graphic .fab {
+.bar .graphic .fa,
+.bar .graphic .fas,
+.bar .graphic .fab {
   color: #061e5c;
   line-height: 24px;
   font-size: 24px;
   vertical-align: middle;
 }
-.link-button .detail {
+.bar .detail {
   height: 100%;
-  width: calc(650px - 40px - (2 * 2px));
   padding: 0;
+  width: calc(100% - 40px);
   color: white;
   background-color: #061e5c;
   float: left;
 }
-.link-button .detail .single-line h4 {
+.bar .single h4 {
   margin: 0;
   margin-left: 10px;
-  line-height: 50px;
+  line-height: calc(50px - (2 * 2px));
   vertical-align: middle;
-  font-size: 16px;
 }
-.link-button .detail .two-lines h4 {
+.bar .double h4 {
   line-height: calc(50px / 2);
   height: 50%;
   vertical-align: middle;
   margin: 0;
   margin-left: 10px;
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: 700;
 }
-.link-button .detail .two-lines h5 {
+.bar .double h5 {
   line-height: calc(50px / 2);
   height: 50%;
   margin: 0;
   margin-left: 10px;
   vertical-align: middle;
-}
-a .detail {
-  color: white !important;
-  background-color: #061e5c !important;
-  transition: 0.5s;
-}
-a:hover .detail,
-a:active .detail {
-  color: #061e5c !important;
-  background-color: white !important;
-  transition: 0.5s;
 }
 body {
   background-color: #BDC3C7;
-  -webkit-touch-callout: none;
   /* iOS Safari */
-  -webkit-user-select: none;
+  -webkit-touch-callout: none;
   /* Safari */
-  -khtml-user-select: none;
+  -webkit-user-select: none;
   /* Konqueror HTML */
-  -moz-user-select: none;
+  -khtml-user-select: none;
   /* Firefox */
-  -ms-user-select: none;
+  -moz-user-select: none;
   /* Internet Explorer/Edge */
-  user-select: none;
+  -ms-user-select: none;
   /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+        upported by Chrome and Opera */
+  user-select: none;
 }
 body .container {
   background-color: #061e5c;
@@ -209,9 +217,6 @@ body .container {
   text-align: center;
   vertical-align: middle;
 }
-.copyright p {
-  font-size: 12px;
-}
 .textured-background {
   background: radial-gradient(#030e2b 3px, transparent 4px), radial-gradient(#030e2b 3px, transparent 4px), linear-gradient(#061e5c 4px, transparent 0), linear-gradient(45deg, transparent 74px, transparent 75px, #030e2b 75px, #030e2b 76px, transparent 77px, transparent 109px), linear-gradient(-45deg, transparent 75px, transparent 76px, #030e2b 76px, #030e2b 77px, transparent 78px, transparent 109px), #061e5c;
   background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
@@ -224,4 +229,15 @@ body .container {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+}
+p {
+  width: 80%;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 760px) {
+  p {
+    width: calc(100% - (2 * 2px));
+  }
 }
