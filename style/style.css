@@ -241,3 +241,97 @@ p {
     width: calc(100% - (2 * 2px));
   }
 }
+.skill-map {
+  margin-left: auto;
+  margin-right: auto;
+}
+:root {
+  /* Change this to change the appearance of the hexaons */
+  --hex-width: 100px;
+  --hex-between: 10px;
+  /* Other hexagon dimentions */
+  --hex-height: calc(var(--hex-width) / 1.73 /* sqrt(3) */);
+  --hex-margin: calc(var(--hex-width) / 2);
+  --hex-border: calc(var(--hex-margin) / 1.73 /* sqrt(3) */);
+  --hex-transition: all 0.2s ease;
+  --color-hex-default: #ffffff;
+  --color-hex-hover: #061e5c;
+}
+.hexagon-container {
+  display: grid;
+  grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width);
+  grid-auto-rows: calc(var(--hex-width) - 28.87px/2);
+  grid-gap: var(--hex-between) var(--hex-between);
+  padding-bottom: var(--hex-border);
+}
+.hexagon {
+  align-items: center;
+  background-color: var(--color-hex-default);
+  display: flex;
+  fill: white;
+  height: var(--hex-height);
+  justify-content: center;
+  margin: var(--hex-border) 0;
+  position: relative;
+  transition: var(--hex-transition);
+  width: var(--hex-width);
+}
+.hexagon span,
+.hexagon i {
+  color: #061e5c;
+}
+.hexagon::after,
+.hexagon::before {
+  border-left: var(--hex-margin) solid transparent;
+  border-right: var(--hex-margin) solid transparent;
+  content: "";
+  left: 0;
+  position: absolute;
+  transition: var(--hex-transition);
+  width: 0;
+}
+.hexagon::after {
+  border-top: var(--hex-border) solid var(--color-hex-default);
+  top: 100%;
+  width: 0;
+}
+.hexagon::before {
+  border-bottom: var(--hex-border) solid var(--color-hex-default);
+  bottom: 100%;
+}
+.hexagon:hover {
+  background-color: var(--color-hex-hover);
+}
+.hexagon:hover span,
+.hexagon:hover i {
+  color: white;
+}
+.hexagon:hover::after,
+.hexagon:hover::before {
+  border-top-color: var(--color-hex-hover);
+  border-bottom-color: var(--color-hex-hover);
+}
+.hexagon:nth-child(8n + 5),
+.hexagon:nth-child(8n + 6),
+.hexagon:nth-child(8n + 7),
+.hexagon:nth-child(8n + 8) {
+  margin-left: calc(var(--hex-width) / 2 + var(--hex-between) / 2);
+}
+.hexagon > svg {
+  height: 75%;
+  transition: var(--hex-transition);
+}
+.transparent,
+.transparent:hover {
+  background-color: transparent;
+}
+.transparent::after,
+.transparent:hover::after,
+.transparent::before,
+.transparent:hover::before {
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.transparent:hover {
+  fill: transparent;
+}
