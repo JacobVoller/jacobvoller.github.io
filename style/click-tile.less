@@ -1,0 +1,140 @@
+@import "variables.less";
+
+@icon-size: 32px;
+
+@link-button-height: 50px;
+@link-button-icon-width: 40px;
+@link-button-border-width: 2px;
+@detail-left-margin: 10px;
+
+.icon {
+    width: 100%;
+
+    text-align: center;
+    vertical-align: middle;
+
+    font-size: @icon-size;
+    line-height: @icon-size;
+
+    background: transparent;
+    color: @text-color;
+}
+
+.click-tile {
+    width: @click-tile-width;
+    margin-left: auto;
+    margin-right: auto;
+
+    a {
+        .detail {
+            color: @text-color !important;
+            background-color: @primary-color !important;
+        
+            transition: @transition-time;
+        }
+    }
+    
+    a:hover,
+    a:active {
+        .detail {
+            color: @primary-color !important;
+            background-color: @text-color !important;
+        
+            transition: @transition-time;
+        }
+    }
+}
+
+@media (max-width: @click-tile-width) {
+    .click-tile {
+      width: calc(100% - (2 * @content-margin));
+
+      .detail {
+        width: calc(100% - @link-button-icon-width - (2 * @link-button-border-width));
+      }
+    }
+}
+
+.bar {
+    background-color: @primary-color;
+
+    border: @link-button-border-width solid @text-color;
+    border-radius: @standard-radius;
+    
+    height: @link-button-height;
+
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    box-shadow: @tile-shadow;
+
+    .graphic {
+        height: 100%;
+        width: @link-button-icon-width;
+
+        background: @text-color;
+
+        float: left;
+        text-align: center;
+        vertical-align: middle;
+        line-height: @link-button-height;
+
+        .fa,
+        .fas,
+        .fab {
+            color: @primary-color;
+
+            line-height: 24px;
+            font-size: 24px;
+            vertical-align: middle;
+        }
+    }
+
+    .detail {
+        height: 100%;
+
+        padding: 0;
+        width: calc(100% - @link-button-icon-width);
+
+        color: @text-color;
+        background-color: @primary-color;
+        
+        float: left;
+    }
+
+    .single {
+        h4 {
+            margin: 0;
+            margin-left: @detail-left-margin;
+            line-height: calc(@link-button-height - (2 * @link-button-border-width));
+            vertical-align: middle;
+        }
+    }
+
+    .double {
+        h4 {
+            line-height: calc(@link-button-height / 2);
+            height: 50%;
+            vertical-align: middle;
+
+            margin: 0;
+            margin-left: @detail-left-margin;
+
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        h5 {
+            line-height: calc(@link-button-height / 2);
+            height: 50%;
+
+            margin: 0;
+            margin-left: @detail-left-margin;
+
+            vertical-align: middle;
+        }
+    }
+
+    
+}

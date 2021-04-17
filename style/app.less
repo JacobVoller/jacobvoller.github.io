@@ -1,0 +1,68 @@
+@import "variables.less";
+
+body {
+    background-color: #BDC3C7;
+
+    /* iOS Safari */
+    -webkit-touch-callout: none;
+
+    /* Safari */
+    -webkit-user-select: none;
+
+    /* Konqueror HTML */
+    -khtml-user-select: none;
+
+    /* Firefox */
+    -moz-user-select: none;
+
+    /* Internet Explorer/Edge */
+    -ms-user-select: none;
+
+    /* Non-prefixed version, currently
+        upported by Chrome and Opera */
+    user-select: none; 
+
+    .container {
+        background-color: @primary-color;
+    }
+}
+
+.no-pad {
+    padding: 0;
+}
+
+.header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.textured-background {
+    background:
+        radial-gradient(@accent-color 3px, transparent 4px),
+        radial-gradient(@accent-color 3px, transparent 4px),
+        linear-gradient(@primary-color 4px, transparent 0),
+        linear-gradient(45deg, transparent 74px, transparent 75px, @accent-color 75px, @accent-color 76px, transparent 77px, transparent 109px),
+        linear-gradient(-45deg, transparent 75px, transparent 76px, @accent-color 76px, @accent-color 77px, transparent 78px, transparent 109px),
+        @primary-color;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+.mar-t-10 {
+    margin-top: 10px;
+}
+
+.fit-content {
+    width: fit-content;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+

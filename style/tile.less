@@ -1,0 +1,29 @@
+@import "variables.less";
+
+.tile {
+    margin: 2px;
+    padding: 15px;
+
+    border: 2px solid @text-color;
+    border-radius: @standard-radius;
+
+    background-color: @primary-color;
+
+    box-shadow: @tile-shadow;
+
+    p {
+        width: 100%;
+    }
+}
+
+.tile:hover {
+    background-color: @text-color;
+    transition: @transition-time;
+
+    i,
+    h3,
+    p {
+        color: @primary-color;
+        transition: @transition-time;
+    }
+}
