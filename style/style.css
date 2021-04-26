@@ -6,9 +6,15 @@
   box-shadow: 20px 20px 20px rgba(26, 21, 21, 0.9);
 }
 @media (max-width: 650px) {
+  body {
+    background-color: #061e5c;
+  }
   .ring-a {
     margin-top: 0;
     margin-bottom: 0;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
   }
 }
 .ring-b {
@@ -74,24 +80,30 @@ p {
   font-size: 14px;
   font-weight: 400;
 }
-.tile {
+.tiles {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.tiles .tile {
   margin: 2px;
   padding: 15px;
   border: 2px solid white;
   border-radius: 3px;
   background-color: #061e5c;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
+  min-height: 130px;
 }
-.tile p {
+.tiles .tile p {
   width: 100%;
 }
-.tile:hover {
+.tiles .tile:hover {
   background-color: white;
   transition: 0.5s;
 }
-.tile:hover i,
-.tile:hover h3,
-.tile:hover p {
+.tiles .tile:hover i,
+.tiles .tile:hover h3,
+.tiles .tile:hover p {
   color: #061e5c;
   transition: 0.5s;
 }
@@ -231,13 +243,14 @@ body .container {
   margin-right: auto;
 }
 .summary p {
-  width: 80%;
+  width: 650px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0;
 }
 @media (max-width: 650px) {
   .summary p {
-    width: 100%;
+    width: calc(100% - (2 * 4px));
     margin-left: 4px;
     margin-right: 4px;
   }
