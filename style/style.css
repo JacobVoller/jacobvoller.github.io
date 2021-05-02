@@ -90,6 +90,7 @@ p {
   padding: 15px;
   border: 2px solid white;
   border-radius: 3px;
+  transition: 0.5s;
   background-color: #061e5c;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.7), 0 9px 14px rgba(0, 0, 0, 0.4), 0 19px 24px rgba(0, 0, 0, 0.4);
   min-height: 130px;
