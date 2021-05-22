@@ -1,0 +1,218 @@
+
+- title = "Jacob C. Voller"
+- subtitle = "Software & Strategy"
+- description = "Jacob Voller is a strategic, customer-oriented, product leader with a passion for solving complex problems with innovative technology. He is experienced in all phases of the software life cycle as well as new product development, research & development, full-stack and microservice development, requirement gathering, technical product support, teaching best practices, and site reliability."
+- handle = "@jacobvoller"
+- website = "https://jacobvoller.com"  
+
+:ruby
+    metas = [
+        ["og:title", "#{title} | #{subtitle}"],
+        ["og:site_name", "#{title}"],
+        ["og:url", "#{website}"],
+        ["og:description", "#{description}"],
+        ["og:type", "website"],
+        ["og:image", "#{website}/img/og.jpg"],
+        ["twitter:title", "#{title} | #{subtitle}"],
+        ["twitter:creator", "#{handle}"],
+        ["twitter:site", "#{handle}"],
+        ["twitter:description", "#{description}"],
+        ["twitter:image", "#{website}/img/twitter.jpg"]
+    ]
+
+    links = [
+        ["canonical", "#{website}/"],
+        ["stylesheet", "https://fonts.googleapis.com/css?family=Cinzel:400,700|Raleway&display=swap"],
+        ["stylesheet", "https://use.fontawesome.com/releases/v5.9.0/css/all.css"],
+        ["stylesheet", "bootstrap.min.css"],
+        ["stylesheet", "style/style.css"]
+    ]
+
+    tiles = [{
+        anchor: "engineering",
+        icon: "fas fa-code",
+        title: "Software Engineering"
+    },{
+        anchor: "strategy",
+        icon: "fas fa-chess-king",
+        title: "Strategy"
+    },{
+        anchor: "product",
+        icon: "fas fa-map-marked",
+        title: "Product Management"
+    },{
+        anchor: "ux",
+        icon: "fas fa-newspaper",
+        title: "User Experience"
+    },{
+        anchor: "tasks",
+        icon: "fas fa-tasks",
+        title: "Program Management"
+    },{
+        anchor: "agile",
+        icon: "fas fa-sync-alt",
+        title: "Agile Development"
+    }]
+
+    contacts = [{
+        title: "contact@jacobvoller.com",
+        icon: "fa fa-envelope",
+        hover: "#{title}'s Email",
+        link: "mailto:contact@jacobvoller.com"
+    },{
+        title: "LinkedIn.com/in/jacobvoller/",
+        icon: "fab fa-linkedin-in",
+        hover: "Jacob C. Voller's LinkedIn",
+        link: "https://www.linkedin.com/in/jacobvoller/"
+    },{
+        title: "Certifications",
+        icon: "fas fa-award",
+        hover: "Jacob C. Voller's Certifications",
+        link: "https://www.credly.com/users/jacobvoller/badges"
+    }]
+
+    schools = [{
+        title: "Canidate, MBA - Masters of Business Administration",
+        subtitle: "Marquette University",
+        icon: "fa fa-university",
+        hover: "MBA at Marquette University",
+        link: "https://www.marquette.edu/business/graduate/mba.php"
+    },{
+        title: "BSSE - Bachelors of Science, Software Engineering",
+        subtitle: "Milwaukee School of Engineering",
+        icon: "fa fa-graduation-cap",
+        hover: "Software Engineering at the Milwaukee School of Engineering",
+        link: "https://www.msoe.edu/academics/undergraduate-degrees/engineering/software-engineering/"
+    }]
+
+!!!
+%html{
+    lang: "en"
+}
+    %head
+        %meta{
+            charset: "UTF-8"
+        }
+        %title #{title} | #{subtitle}
+
+        %meta{
+            name: "description",
+            content: "#{description}"
+        }
+        %meta{
+            name: "keywords",
+            content: "Jacob, Voller, jacobvoller, Jacob Voller, Jacob C. Voller, Jacob C Voller, MSI Data, Service Pro"
+        }
+        %meta{
+            name: "viewport",
+            content: "width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86"
+        }
+        %meta{
+            name: "msvalidate.01",
+            content: "399CC1E1EF05C017B3B21885DC0B40D8"
+        }
+
+        - metas.each do |m|
+            %meta{
+                property: m[0],
+                content: m[1]
+            }
+
+        %link{
+            rel: "icon",
+            href: "img/favicon.png",
+            type: "image/x-icon"
+        }
+
+        - links.each do |l|
+            %link{
+                rel: l[0],
+                href: l[1], 
+            }
+        
+        %script{
+            async: "",
+            src: "https://www.googletagmanager.com/gtag/js?id=UA-99518747-1"
+        }
+        
+        :javascript
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-99518747-1');
+    %body
+        .container.ring-a{
+            itemscope: "",
+            itemtype: "http://schema.org/Article"
+        }
+            .ring-b
+                .ring-c
+                    .ring-d
+                        .ring-e
+                            .ring-f
+                                .ring-g.textured-background
+                                    .row.header
+                                        %h1{
+                                            itemprop: "name"
+                                        } #{title}
+                                        %h2{
+                                            itemprop: "headline"
+                                        } #{subtitle}
+                                    .row
+                                        .col-xs-12.summary
+                                            %p #{description}
+                                    .row.tiles
+                                        .col-xs-12
+                                            - tiles.each do |tile|
+                                                .col-xs-6.col-md-4.col-lg-2.no-pad
+                                                    .tile.tile-shadow
+                                                        %a{
+                                                            name: tile[:anchor]
+                                                        }
+                                                        %i.icon{
+                                                            class: tile[:icon]
+                                                        }
+                                                        %h3 #{tile[:title]}
+                                    .row.mar-t-10
+                                        .col-xs-12
+                                            %a{
+                                                name: "contact"
+                                            }
+                                            %h3 Contact
+                                            - contacts.each do |contact|
+                                                .click-tile
+                                                    %a.fit-content{
+                                                        href: contact[:link],
+                                                        title: contact[:hover]
+                                                    }
+                                                        .bar
+                                                            .graphic
+                                                                %i.background{
+                                                                    class: contact[:icon]
+                                                                }
+                                                            .detail.single
+                                                                %h4 #{contact[:title]}
+                                    .row.mar-t-10
+                                        .col-xs-12
+                                            %a{
+                                                name: "education"
+                                            }
+                                            %h3 Education
+                                            - schools.each do |school|
+                                                .click-tile
+                                                    %a.fit-content{
+                                                        href: school[:link],
+                                                        target: "_blank",
+                                                        title: school[:hover]
+                                                    }
+                                                        .bar
+                                                            .graphic
+                                                                %i.background{
+                                                                    class: school[:icon]
+                                                                }
+                                                            .detail.double
+                                                                %h4 #{school[:title]}
+                                                                %h5 #{school[:subtitle]}
+                                    .row.copyright

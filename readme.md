@@ -1,5 +1,9 @@
 # jacobvoller.com
 
+## HAML
+1. sudo gem install haml
+2. sudo haml index.haml index.html
+
 ### Libraries
 1. Bootstrap
 2. FontAwesome
